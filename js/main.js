@@ -73,25 +73,75 @@
    $.Scrollax();
 
 	var carousel = function() {
-		$('.carousel-car').owlCarousel({
-			center: true,
+		$('.carousel-service').owlCarousel({
+			center: false,
 			loop: true,
 			autoplay: true,
 			items:1,
 			margin: 30,
 			stagePadding: 0,
-			nav: false,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+			nav: true,
+			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
 			responsive:{
 				0:{
-					items: 1
+					items: 1,
+					dots: false,
 				},
-				600:{
-					items: 2
+				500:{
+					items: 2,
+					center: true,
+					dots: false,
 				},
-				1000:{
-					items: 3
+				992:{
+					items: 3,
+					center: true,
+				},
+				1201:{
+					items: 4,
+					autoplay: false,
+					nav: false,
+					dots: false,
+					mouseDrag: false,
+					touchDrag: false,
+					pullDrag: false,
 				}
+
+			}
+		});
+		$('.carousel-solution').owlCarousel({
+			center: false,
+			loop: true,
+			autoplay: true,
+			items:1,
+			margin: 30,
+			stagePadding: 0,
+			nav: true,
+			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+			responsive:{
+				0:{
+					items: 1,
+					dots: false,
+				},
+				500:{
+					items: 2,
+					center: true,
+					dots: false,
+				},
+				992:{
+					items: 3,
+					center: true,
+				},
+				1201:{
+					items: 4,
+					loop: false,
+					autoplay: false,
+					nav: false,
+					dots: false,
+					mouseDrag: false,
+					touchDrag: false,
+					pullDrag: false,
+				}
+
 			}
 		});
 		$('.carousel-testimony').owlCarousel({
@@ -100,7 +150,7 @@
 			items:1,
 			margin: 30,
 			stagePadding: 0,
-			nav: false,
+			nav: true,
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
 			responsive:{
 				0:{
@@ -273,7 +323,8 @@
 		 	e.preventDefault();
 
 		 	var hash = this.hash,
-		 			navToggler = $('.navbar-toggler');
+			navToggler = $('.navbar-toggler');
+			navbar = $('.ftco_navbar'),
 		 	$('html, body').animate({
 		    scrollTop: $(hash).offset().top
 		  }, 700, 'easeInOutExpo', function(){
@@ -282,7 +333,12 @@
 
 
 		  if ( navToggler.is(':visible') ) {
-		  	navToggler.click();
+			  navbar.removeClass('scrolled sleep');
+			  navToggler.click();
+			  navbar.addClass('scrolled awake');
+			} else {
+			  navbar.addClass('scrolled sleep');
+			  navbar.removeClass('scrolled awake');
 		  }
 		});
 		$('body').on('activate.bs.scrollspy', function () {
