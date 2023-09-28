@@ -8612,6 +8612,10 @@ h1, h2, h3, h4, h5,
         padding: 4px 4px;
         font-size: 28px; }
   .owl-carousel .owl-dots {
+    right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     text-align: center; }
     .owl-carousel .owl-dots .owl-dot {
       width: 10px;
@@ -8620,7 +8624,7 @@ h1, h2, h3, h4, h5,
       border-radius: 50%;
       background: #e6e6e6;
       position: relative; }
-      .owl-carousel .owl-dots .owl-dot:after {
+      /* .owl-carousel .owl-dots .owl-dot::before {
         position: absolute;
         top: -2px;
         left: -2px;
@@ -8633,7 +8637,7 @@ h1, h2, h3, h4, h5,
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
-        border-radius: 50%; }
+        border-radius: 50%; } */
       .owl-carousel .owl-dots .owl-dot.active {
         background: #b3b3b3; }
   .owl-carousel .owl-nav .owl-prev:hover,
@@ -9217,6 +9221,110 @@ h1, h2, h3, h4, h5,
     width: 700px;
   }
 }
+
+.projects {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  /* background-image: url('../images/background_solution.svg'); */
+  width: 100%;
+  padding: 12px;
+  padding-top: 124px;
+}
+
+.projects .services {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
+.projects .services a {
+  font-size: 24px;
+}
+
+.projects .owl-carousel .owl-dots {
+  top: -124px;
+  height: 100px;
+  display: flex;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.owl-dots::-webkit-scrollbar {
+  display: none;
+}
+
+.projects .owl-carousel .owl-dots .owl-dot {
+  width: 62px;
+  height: 40px;
+  margin: 5px auto;
+  padding: 5px 112px;
+  border-radius: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.25;
+}
+
+.projects .owl-carousel .owl-dots .owl-dot.active {
+  opacity: 1;
+}
+
+.projects .owl-carousel .owl-dots .owl-dot:nth-child(1) {
+  position: relative;
+  background-image: url(../images/dot_brand.svg);
+}
+.projects .owl-carousel .owl-dots .owl-dot:nth-child(1) span::after {
+  content: "BrandCom";
+  position: absolute;
+  left: 68px;
+  font-size: 18px;
+  bottom: -36px;
+  font-weight: 700;
+  color: #0943EC;
+}
+.projects .owl-carousel .owl-dots .owl-dot:nth-child(2) {
+  background-image: url(../images/dot_mkt.svg);
+}
+.projects .owl-carousel .owl-dots .owl-dot:nth-child(2) span::after {
+  content: "Digital Marketing";
+  position: absolute;
+  left: 36px;
+  font-size: 18px;
+  bottom: -36px;
+  font-weight: 700;
+  color: #0943EC;
+  width: 146px;
+}
+.projects .owl-carousel .owl-dots .owl-dot:nth-child(3) {
+  background-image: url(../images/dot_web.svg);
+}
+.projects .owl-carousel .owl-dots .owl-dot:nth-child(3) span::after {
+  content: "Website";
+  position: absolute;
+  left: 76px;
+  font-size: 18px;
+  bottom: -36px;
+  font-weight: 700;
+  color: #0943EC;
+}
+.projects .owl-carousel .owl-dots .owl-dot:nth-child(4) {
+  background-image: url(../images/dot_mobile.svg);
+}
+.projects .owl-carousel .owl-dots .owl-dot:nth-child(4) span::after {
+  content: "Mobile App";
+  position: absolute;
+  left: 64px;
+  font-size: 18px;
+  bottom: -36px;
+  font-weight: 700;
+  color: #0943EC;
+  width: 98px;
+}
+
 .ftco-intro {
   background-size: cover;
   background-repeat: no-repeat;
@@ -9342,6 +9450,11 @@ textarea.form-control {
 .ftco-section {
   padding: 6em 0;
   position: relative; }
+
+.project-section {
+  padding-bottom: 0;
+  background-image: url(../images/background-project.svg);
+}
 
 .ftco-no-pt {
   padding-top: 0; }

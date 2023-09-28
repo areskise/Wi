@@ -144,6 +144,16 @@
 
 			}
 		});
+		$('.carousel-project').owlCarousel({
+			center: false,
+			loop: true,
+			autoplay: false,
+			items:1,
+			margin: 30,
+			stagePadding: 0,
+			nav: false,
+			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+		});
 		$('.carousel-testimony').owlCarousel({
 			center: true,
 			loop: true,
@@ -390,3 +400,14 @@
 
 })(jQuery);
 
+      
+$('.projects .owl-carousel .owl-dots .owl-dot:nth-child(1), .projects .owl-carousel .owl-dots .owl-dot:nth-child(2)').click(function(e){
+	$('.projects .owl-carousel .owl-dots').animate({
+        scrollLeft: -$('.projects .owl-carousel .owl-dots .owl-dot.active').offset().left
+    }, 500);
+})
+$('.projects .owl-carousel .owl-dots .owl-dot:nth-child(3), .projects .owl-carousel .owl-dots .owl-dot:nth-child(4)').click(function(e){
+	$('.projects .owl-carousel .owl-dots').animate({
+        scrollLeft: $('.projects .owl-carousel .owl-dots .owl-dot.active').offset().left + 200
+    }, 500);
+})
