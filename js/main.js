@@ -108,6 +108,7 @@
 
 			}
 		});
+
 		$('.carousel-solution').owlCarousel({
 			center: false,
 			loop: true,
@@ -141,9 +142,9 @@
 					touchDrag: false,
 					pullDrag: false,
 				}
-
 			}
 		});
+
 		$('.carousel-project').owlCarousel({
 			center: false,
 			loop: true,
@@ -154,9 +155,11 @@
 			nav: false,
 			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
 		});
+
 		$('.carousel-testimony').owlCarousel({
-			center: true,
+			center: false,
 			loop: true,
+			autoplay: true,
 			items:1,
 			margin: 30,
 			stagePadding: 0,
@@ -164,14 +167,109 @@
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
 			responsive:{
 				0:{
-					items: 1
+					items: 1,
+					dots: false,
 				},
-				600:{
-					items: 2
+				500:{
+					items: 1,
+					center: true,
+					dots: false,
 				},
-				1000:{
-					items: 3
+				992:{
+					items: 3,
+					center: true,
+				},
+				1201:{
+					items: 4,
+					loop: false,
+					autoplay: false,
+					margin: 60,
+					nav: false,
+					dots: false,
+					mouseDrag: false,
+					touchDrag: false,
+					pullDrag: false,
 				}
+			}
+		});
+
+		$('.carousel-stage').owlCarousel({
+			center: false,
+			loop: true,
+			autoplay: true,
+			items:1,
+			margin: 30,
+			stagePadding: 0,
+			nav: true,
+			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+			responsive:{
+				0:{
+					items: 1,
+					dots: false,
+				},
+				768:{
+					items: 1,
+					center: true,
+					dots: false,
+				},
+				992:{
+					items: 2,
+					center: true,
+				},
+				1201:{
+					items: 3,
+					loop: false,
+					autoplay: false,
+					margin: 60,
+					nav: false,
+					dots: false,
+					mouseDrag: false,
+					touchDrag: false,
+					pullDrag: false,
+				},
+				1921:{
+					items: 3,
+					loop: false,
+					autoplay: false,
+					margin: 90,
+					nav: false,
+					dots: false,
+					mouseDrag: false,
+					touchDrag: false,
+					pullDrag: false,
+				}
+			}
+		});
+
+		$('.carousel-counter').owlCarousel({
+			center: false,
+			loop: true,
+			autoplay: true,
+			items:1,
+			margin: 30,
+			stagePadding: 0,
+			nav: true,
+			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+			responsive:{
+				0:{
+					items: 1,
+					dots: false,
+				},
+				500:{
+					items: 2,
+					center: true,
+					dots: false,
+				},
+				992:{
+					items: 3,
+					autoplay: false,
+					nav: false,
+					dots: false,
+					mouseDrag: false,
+					touchDrag: false,
+					pullDrag: false,
+				}
+
 			}
 		});
 
