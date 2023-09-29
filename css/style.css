@@ -8428,14 +8428,9 @@ h1, h2, h3, h4, h5,
         height: 1150px; }  */
       }
   .hero-wrap.hero-wrap-2 {
-    height: 600px !important;
-    position: relative; }
-    .hero-wrap.hero-wrap-2 .overlay {
-      width: 100%;
-      opacity: .3;
-      height: 600px; }
-    .hero-wrap.hero-wrap-2 .slider-text {
-      height: 600px !important; }
+    position: relative;
+    background: none;
+   }
 
 .slider-text {
   position: absolute;
@@ -9454,6 +9449,8 @@ textarea.form-control {
 .project-section {
   padding-bottom: 0;
   background-image: url(../images/background-project.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .ftco-no-pt {
