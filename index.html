@@ -70,7 +70,7 @@
     <!-- Navbar End -->
     
     <!-- Banner Start -->
-    <div class="swiper bannerSwiper">
+    <div class="swiper bannerSwiper parallaxed">
       <div class="icon-contact">
         <a href="#contact">
           <img src='images/svg-mail.svg' alt="logo" width="48" height="48" className="logo-img" />
@@ -134,13 +134,13 @@
 
     <!-- Services Start -->
     <section class="section-services">
-      <div class="svg svg-like">
+      <div class="svg svg-like rellax" data-rellax-speed="2" data-rellax-percentage="0.5" >
         <img src='images/png-like.png' alt="logo" className="logo-img" />
       </div>
-      <div class="svg svg-ht">
+      <div class="svg svg-ht rellax" data-rellax-speed="3">
         <img src='images/svg-ht.svg' alt="logo" className="logo-img" />
       </div>
-      <div class="svg svg-heart">
+      <div class="svg svg-heart rellax" data-rellax-speed="4">
         <img src='images/svg-heart.svg' alt="logo" className="logo-img" />
       </div>
       <div class="d-flex flex-column align-items-center no-gutters container services-wrap rounded-right justify-content-evenly">
@@ -203,12 +203,12 @@
     <!-- Solution Start -->
     <section class="ftco-section ftco-section-parallax">
       <div class="svg-parallax svg-design rellax" 
-        data-rellax-speed="-4"
+        data-rellax-speed="2"
       >
         <img src='images/svg-design.svg' alt="logo" className="logo-img" />
       </div>
       <div class="svg-parallax svg-chart rellax" 
-        data-rellax-speed="-2"
+        data-rellax-speed="3"
       >
         <img src='images/svg-chart.svg' alt="logo" className="logo-img" />
       </div>
@@ -239,7 +239,7 @@
                   <img class="w-100" src="./images/solution_web.png" alt="">
                 </div>
                 <div class="text w-100">
-                  <h3 class="heading mb-5">Thiết kế website</h3>
+                  <h3 class="heading mb-4">Thiết kế website</h3>
                   <!-- <p>Thiết kế sáng tạo và lập trình tối ưu hoá website. Web chuẩn nhanh và phù hợp với nhiều loại màn hình.</p> -->
                 </div>
               </div>
@@ -260,14 +260,12 @@
                   <img class="w-100" src="./images/solution_ecommerce.png" alt="">
                 </div>
                 <div class="text w-100">
-                  <h3 class="heading mb-5">Marketing Thương mại điện tử</h3>
+                  <h3 class="heading mb-4">Marketing Thương mại điện tử</h3>
                   <!-- <p>Thiết kế UI UX và lập trình ứng dụng với công nghệ mới nhẩt. Ứng dụng tương thích với iOS, Android và nhiều loại platform.</p> -->
                 </div>
               </div>
             </div>
             <div class="d-flex align-self-stretch ftco-animate">
-              <div class="hover-bg glass3">
-              </div>
               <div class="hover-content">
                 <div style="max-width: 260px;">
                   <img class="mb-5" style="width: 72px;" src="./images/Giaiphap--01.svg" alt="">
@@ -276,12 +274,14 @@
                   <p>Đội ngũ kỹ thuật kinh nghiệm triển khai cho nhiều dự án lớn.</p>
                 </div>
               </div>
+              <div class="hover-bg glass3">
+              </div>
               <div class="services w-100 text-center">
                 <div class="mb-4 png">
                   <img class="w-100" src="./images/solution_app.png" alt="">
                 </div>
                 <div class="text w-100">
-                  <h3 class="heading mb-">Lập trình ứng dụng</h3>
+                  <h3 class="heading mb-4">Lập trình ứng dụng</h3>
                   <!-- <p>WI có 9+ năm kinh nghiệm, hỗ trợ hơn 1000+ khách hàng trong sáng tạo, xây dựng và phát triển thương hiệu.</p> -->
                 </div>
               </div>
@@ -302,7 +302,7 @@
                   <img class="w-100" src="./images/solution_marketing.png" alt="">
                 </div>
                 <div class="text w-100">
-                  <h3 class="heading mb-5">Chiến dịch Marketing</h3>
+                  <h3 class="heading mb-4">Chiến dịch Marketing</h3>
                   <!-- <p>Các dịch vụ hỗ trợ Lập kế hoạch truyền thông chuyên nghiệp, thích hợp cho doanh nghiệp.</p> -->
                 </div>
               </div>
@@ -315,6 +315,9 @@
 
     <!-- Customer Start -->
     <section class="section-customer">
+      <div class="svg svg-smile rellax" data-rellax-speed="2">
+        <img src='images/svg-smile.svg' alt="logo" className="logo-img" />
+      </div>
       <div
         class="d-flex flex-column align-items-center no-gutters container services-wrap rounded-right justify-content-evenly">
         <div class="d-flex flex-column align-items-center heading-section-white ftco-animate">
@@ -322,11 +325,23 @@
           <p style="max-width: 747px; text-align: center;" class="d-sx-none">Chúng tôi tự hào làm việc tốt với những khách hàng thân thiết ở Việt Nam và nước ngoài.</p>
         </div>
         <!-- <div class="w-100"> -->
-        <div class="mb-4">
+        <div class="w-100 mb-4">
           <div class="d-flex align-self-stretch ftco-animate">
-            <div class="services w-100 text-center">
-              <div class="mb-4">
-                <img src="./images/customers.svg" alt="">
+            <div class="d-flex services w-100 text-center justify-content-evenly">
+              <div class="m-4">
+                <img src="./images/client1.png" alt="">
+              </div>
+              <div class="m-4">
+                <img src="./images/client2.png" alt="">
+              </div>
+              <div class="m-4">
+                <img src="./images/client3.png" alt="">
+              </div>
+              <div class="m-4">
+                <img src="./images/client4.png" alt="">
+              </div>
+              <div class="m-4">
+                <img src="./images/client5.png" alt="">
               </div>
             </div>
           </div>
@@ -350,15 +365,15 @@
             <div class="d-flex align-self-stretch ftco-animate">
               <div class="services w-100 text-center align-items-center">
                 <div class="row mb-4 w-100">
-                  <div class="col-lg-6"><img class="w-100" src="./images/vina-logistics-2.svg" alt=""></div>
+                  <a class="col-lg-6 selected"><img class="w-100" src="./images/vina-logistics-2.svg" alt=""></a>
                   <div class="row col-lg-6">
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics-4.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics-3.svg" alt=""></div>
+                      <a class="selected"><img class="w-100" src="./images/vina-logistics-4.svg" alt=""></a>
+                      <a class="selected"><img class="w-100" src="./images/vina-logistics-3.svg" alt=""></a>
                     </div>
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics-6.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics-7.svg" alt=""></div>
+                      <a class="selected"><img class="w-100" src="./images/vina-logistics-6.svg" alt=""></a>
+                      <a class="selected"><img class="w-100" src="./images/vina-logistics-7.svg" alt=""></a>
                       <div class="d-flex justify-content-end"><a href="services.html">Tất cả dự án<i class="ion-md-arrow-forward pl-2"></i></a></div>
                     </div>
                   </div>
@@ -433,7 +448,13 @@
     	<div class="container">
     		<div class="row">
           <div class="col-lg-6 justify-content-center counter-wrap ftco-animate">
-            <img class="w-100" src="./images/svg-contact.svg" alt="">
+            <div class="ag-format-container">
+              <div class="ag-404_img-box">
+                <img src="./images/contact-form1.png" class="ag-404_img ag-404_img__first" alt="Flashcookie">
+                <img src="./images/contact-form3.png" class="ag-404_img" alt="Flashcookie">
+                <img src="./images/contact-form2.png" class="ag-404_img ag-404_img__last" alt="Flashcookie">
+              </div>
+            </div>
           </div>
           <div class="col-lg-6 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="d-flex flex-column heading-section ftco-animate">
