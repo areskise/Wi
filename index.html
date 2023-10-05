@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap"
       rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     
@@ -57,7 +59,7 @@
               <div class="nav-link" title="Liên hệ">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
                 aria-expanded="false" aria-label="Toggle navigation">
-                  <img src='images/close-menu.svg' alt="logo" width="32" height="32" className="logo-img" />
+                  <img src='images/close-menu.svg' alt="logo" width="48" height="48" className="logo-img" />
                 </button>
               </div>
             </li>
@@ -68,15 +70,61 @@
     <!-- Navbar End -->
     
     <!-- Banner Start -->
-    <div class="hero-wrap ftco-degree-bg">
-    <!-- <div class="hero-wrap ftco-degree-bg" data-stellar-background-ratio="0.5"> -->
-      <div class="container">
-        <div class="row no-gutters slider-text justify-content-start align-items-center">
-          <div class="col-lg-4 ftco-animate">
-          	<div class="text w-100">
-	            <h1 class="mb-4">Thiết kế web và ứng dụng</h1>
-	            <p class="mb-4">Wi mang tới cho doanh nghiệp giải pháp thiết kế và phát triển thương hiệu chuyên nghiệp và bền vững</p>
-              <p><a href="#" class="btn-bg">Liên hệ ngay</a></p>
+    <div class="swiper bannerSwiper">
+      <div class="icon-contact">
+        <a href="#contact">
+          <img src='images/svg-mail.svg' alt="logo" width="48" height="48" className="logo-img" />
+        </a>
+        <a href="#contact">
+          <img src='images/svg-phone.svg' alt="logo" width="48" height="48" className="logo-img" />
+        </a>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="hero-wrap banner1 ftco-degree-bg">
+            <!-- <div class="hero-wrap ftco-degree-bg" data-stellar-background-ratio="0.5"> -->
+            <div class="container">
+              <div class="row no-gutters slider-text justify-content-start align-items-center">
+                <div class="col-lg-4 ftco-animate">
+                  <div class="text w-100">
+                    <h1 class="mb-4">Thiết kế web và ứng dụng</h1>
+                    <p class="mb-4">Wi mang tới cho doanh nghiệp giải pháp thiết kế và phát triển thương hiệu chuyên nghiệp và bền vững</p>
+                    <p><a href="#" class="btn-bg">Liên hệ ngay</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-wrap banner2 ftco-degree-bg">
+            <!-- <div class="hero-wrap ftco-degree-bg" data-stellar-background-ratio="0.5"> -->
+            <div class="container">
+              <div class="row no-gutters slider-text justify-content-start align-items-center">
+                <div class="col-lg-5 ftco-animate">
+                  <div class="text w-100">
+                    <h1 class="mb-4">Quảng cáo Digital</h1>
+                    <p class="mb-4">Wi tập trung phát triển ý tưởng quảng bá hình ảnh doanh nghiệp trong thời đại số</p>
+                    <p><a href="#" class="btn-bg">Liên hệ ngay</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-wrap banner3 ftco-degree-bg">
+            <!-- <div class="hero-wrap ftco-degree-bg" data-stellar-background-ratio="0.5"> -->
+            <div class="container">
+              <div class="row no-gutters slider-text justify-content-start align-items-center">
+                <div class="col-lg-6 ftco-animate">
+                  <div class="text w-100">
+                    <h1 class="mb-4">Chiến lược thương hiệu</h1>
+                    <p class="mb-4">Wi góp phần tăng lượng khách hàng cho các công ty nhỏ và shop kinh doanh trên các nền tảng thương mại điện tử</p>
+                    <p><a href="#" class="btn-bg">Liên hệ ngay</a></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -86,6 +134,15 @@
 
     <!-- Services Start -->
     <section class="section-services">
+      <div class="svg svg-like">
+        <img src='images/png-like.png' alt="logo" className="logo-img" />
+      </div>
+      <div class="svg svg-ht">
+        <img src='images/svg-ht.svg' alt="logo" className="logo-img" />
+      </div>
+      <div class="svg svg-heart">
+        <img src='images/svg-heart.svg' alt="logo" className="logo-img" />
+      </div>
       <div class="d-flex flex-column align-items-center no-gutters container services-wrap rounded-right justify-content-evenly">
         <div class="d-flex flex-column align-items-center heading-section-white ftco-animate">
           <h1 class="heading-section">Dịch vụ</h1>
@@ -96,7 +153,7 @@
             <div class="d-flex align-self-stretch ftco-animate">
               <div class="services w-100 text-center">
                 <div class="mb-4">
-                  <img src="./images/icon-web.svg" alt="">
+                  <img src="./images/png-web.png" alt="">
                 </div>
                 <div class="text w-100">
                   <h3 class="heading mb-4">Thiết kế website</h3>
@@ -107,7 +164,7 @@
             <div class="d-flex align-self-stretch ftco-animate">
               <div class="services w-100 text-center">
                 <div class="mb-4">
-                  <img src="./images/icon-mobile.svg" alt="">
+                  <img src="./images/png-mobile.png" alt="">
                 </div>
                 <div class="text w-100">
                   <h3 class="heading mb-4">Ứng dụng di dộng</h3>
@@ -118,7 +175,7 @@
             <div class="d-flex align-self-stretch ftco-animate">
               <div class="services w-100 text-center">
                 <div class="mb-4">
-                  <img src="./images/icon-brand.svg" alt="">
+                  <img src="./images/png-brand.png" alt="">
                 </div>
                 <div class="text w-100">
                   <h3 class="heading mb-4">Tư vấn thương hiệu</h3>
@@ -129,7 +186,7 @@
             <div class="d-flex align-self-stretch ftco-animate">
               <div class="services w-100 text-center">
                 <div class="mb-4">
-                  <img src="./images/icon-digital.svg" alt="">
+                  <img src="./images/png-digital.png" alt="">
                 </div>
                 <div class="text w-100">
                   <h3 class="heading mb-4">Digital marketing</h3>
@@ -144,7 +201,17 @@
     <!-- Services End -->
 
     <!-- Solution Start -->
-    <section class="ftco-section">
+    <section class="ftco-section ftco-section-parallax">
+      <div class="svg-parallax svg-design rellax" 
+        data-rellax-speed="-4"
+      >
+        <img src='images/svg-design.svg' alt="logo" className="logo-img" />
+      </div>
+      <div class="svg-parallax svg-chart rellax" 
+        data-rellax-speed="-2"
+      >
+        <img src='images/svg-chart.svg' alt="logo" className="logo-img" />
+      </div>
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="d-flex flex-column align-items-center heading-section ftco-animate">
@@ -154,47 +221,88 @@
           </div>
         </div>
         <div class="solutions">
+          <div class="solutions-bg"></div>
           <div class="mb-4 carousel-solution owl-carousel">
             <div class="d-flex align-self-stretch ftco-animate">
+              <div class="hover-bg glass2">
+              </div>
+              <div class="hover-content">
+                <div style="max-width: 250px;">
+                  <img class="mb-5" style="width: 72px;" src="./images/Giaiphap--04.svg" alt="">
+                  <h3 class="heading mb-4">Thiết kế<br/>
+                  Website</h3>
+                  <p>Dịch vụ toàn diện và linh hoạt theo nhu cầu từng doanh nghiệp</p>
+                </div>
+              </div>
               <div class="services w-100 text-center">
-                <div class="mb-4">
-                  <img src="./images/solution_web.svg" alt="">
+                <div class="mb-4 png">
+                  <img class="w-100" src="./images/solution_web.png" alt="">
                 </div>
                 <div class="text w-100">
-                  <h3 class="heading mb-4">Thiết kế website</h3>
+                  <h3 class="heading mb-5">Thiết kế website</h3>
                   <!-- <p>Thiết kế sáng tạo và lập trình tối ưu hoá website. Web chuẩn nhanh và phù hợp với nhiều loại màn hình.</p> -->
                 </div>
               </div>
             </div>
             <div class="d-flex align-self-stretch ftco-animate">
+              <div class="hover-bg glass">
+              </div>
+              <div class="hover-content">
+                <div style="max-width: 250px;">
+                  <img class="mb-5" style="width: 72px;" src="./images/Giaiphap--02.svg" alt="">
+                  <h3 class="heading mb-4">Truyền thông<br/>
+                  thương hiệu</h3>
+                  <p>Xây dựng thương hiệu theo cách chuyên nghiệp, hiệu quả mang lại lợi ích lâu dài cho doanh nghiệp.</p>
+                </div>
+              </div>
               <div class="services w-100 text-center">
-                <div class="mb-4">
-                  <img class="w-100" src="./images/solution_ecommerce.svg" alt="">
+                <div class="mb-4 png">
+                  <img class="w-100" src="./images/solution_ecommerce.png" alt="">
                 </div>
                 <div class="text w-100">
-                  <h3 class="heading mb-4">Marketing Thương mại điện tử</h3>
+                  <h3 class="heading mb-5">Marketing Thương mại điện tử</h3>
                   <!-- <p>Thiết kế UI UX và lập trình ứng dụng với công nghệ mới nhẩt. Ứng dụng tương thích với iOS, Android và nhiều loại platform.</p> -->
                 </div>
               </div>
             </div>
             <div class="d-flex align-self-stretch ftco-animate">
+              <div class="hover-bg glass3">
+              </div>
+              <div class="hover-content">
+                <div style="max-width: 260px;">
+                  <img class="mb-5" style="width: 72px;" src="./images/Giaiphap--01.svg" alt="">
+                  <h3 class="heading mb-4">Lập trình<br/>
+                  ứng dụng</h3>
+                  <p>Đội ngũ kỹ thuật kinh nghiệm triển khai cho nhiều dự án lớn.</p>
+                </div>
+              </div>
               <div class="services w-100 text-center">
-                <div class="mb-4">
-                  <img class="w-100" src="./images/solution_app.svg" alt="">
+                <div class="mb-4 png">
+                  <img class="w-100" src="./images/solution_app.png" alt="">
                 </div>
                 <div class="text w-100">
-                  <h3 class="heading mb-4">Lập trình ứng dụng</h3>
+                  <h3 class="heading mb-">Lập trình ứng dụng</h3>
                   <!-- <p>WI có 9+ năm kinh nghiệm, hỗ trợ hơn 1000+ khách hàng trong sáng tạo, xây dựng và phát triển thương hiệu.</p> -->
                 </div>
               </div>
             </div>
             <div class="d-flex align-self-stretch ftco-animate">
+              <div class="hover-bg glass4">
+              </div>
+              <div class="hover-content">
+                <div style="max-width: 250px;">
+                  <img class="mb-5" style="width: 72px;" src="./images/Giaiphap--03.svg" alt="">
+                  <h3 class="heading mb-4">Chiến dịch<br/>
+                  Marketing</h3>
+                  <p>Quy trình dịch vụ rõ ràng, minh bạch chi phí. Tối ưu, tăng hiệu quả quảng cáo theo dữ liệu thực tế.</p>
+                </div>
+              </div>
               <div class="services w-100 text-center align-items-center">
-                <div class="mb-4">
-                  <img src="./images/solution_marketing.svg" alt="">
+                <div class="mb-4 png">
+                  <img class="w-100" src="./images/solution_marketing.png" alt="">
                 </div>
                 <div class="text w-100">
-                  <h3 class="heading mb-4">Chiến dịch Marketing</h3>
+                  <h3 class="heading mb-5">Chiến dịch Marketing</h3>
                   <!-- <p>Các dịch vụ hỗ trợ Lập kế hoạch truyền thông chuyên nghiệp, thích hợp cho doanh nghiệp.</p> -->
                 </div>
               </div>
@@ -242,15 +350,15 @@
             <div class="d-flex align-self-stretch ftco-animate">
               <div class="services w-100 text-center align-items-center">
                 <div class="row mb-4 w-100">
-                  <div class="col-lg-6"><img class="w-100" src="./images/vina-logistics 2.svg" alt=""></div>
+                  <div class="col-lg-6"><img class="w-100" src="./images/vina-logistics-2.svg" alt=""></div>
                   <div class="row col-lg-6">
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics 4.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics 3.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-4.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-3.svg" alt=""></div>
                     </div>
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics 6.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics 7.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-6.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-7.svg" alt=""></div>
                       <div class="d-flex justify-content-end"><a href="services.html">Tất cả dự án<i class="ion-md-arrow-forward pl-2"></i></a></div>
                     </div>
                   </div>
@@ -260,15 +368,15 @@
             <div class="d-flex align-self-stretch ftco-animate">
               <div class="services w-100 text-center align-items-center">
                 <div class="row mb-4 w-100">
-                  <div class="col-lg-6"><img class="w-100" src="./images/vina-logistics 2.svg" alt=""></div>
+                  <div class="col-lg-6"><img class="w-100" src="./images/vina-logistics-2.svg" alt=""></div>
                   <div class="row col-lg-6">
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics 4.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics 3.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-4.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-3.svg" alt=""></div>
                     </div>
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics 6.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics 7.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-6.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-7.svg" alt=""></div>
                       <div class="d-flex justify-content-end"><a href="services.html">Tất cả dự án<i
                             class="ion-md-arrow-forward pl-2"></i></a></div>
                     </div>
@@ -279,15 +387,15 @@
             <div class="d-flex align-self-stretch ftco-animate">
               <div class="services w-100 text-center align-items-center">
                 <div class="row mb-4 w-100">
-                  <div class="col-lg-6"><img class="w-100" src="./images/vina-logistics 2.svg" alt=""></div>
+                  <div class="col-lg-6"><img class="w-100" src="./images/vina-logistics-2.svg" alt=""></div>
                   <div class="row col-lg-6">
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics 4.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics 3.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-4.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-3.svg" alt=""></div>
                     </div>
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics 6.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics 7.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-6.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-7.svg" alt=""></div>
                       <div class="d-flex justify-content-end"><a href="services.html">Tất cả dự án<i
                             class="ion-md-arrow-forward pl-2"></i></a></div>
                     </div>
@@ -298,15 +406,15 @@
             <div class="d-flex align-self-stretch ftco-animate">
               <div class="services w-100 text-center align-items-center">
                 <div class="row mb-4 w-100">
-                  <div class="col-lg-6"><img class="w-100" src="./images/vina-logistics 2.svg" alt=""></div>
+                  <div class="col-lg-6"><img class="w-100" src="./images/vina-logistics-2.svg" alt=""></div>
                   <div class="row col-lg-6">
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics 4.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics 3.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-4.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-3.svg" alt=""></div>
                     </div>
                     <div class="d-flex flex-column col-lg-6 justify-content-between">
-                      <div class=""><img class="w-100" src="./images/vina-logistics 6.svg" alt=""></div>
-                      <div class=""><img class="w-100" src="./images/vina-logistics 7.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-6.svg" alt=""></div>
+                      <div class=""><img class="w-100" src="./images/vina-logistics-7.svg" alt=""></div>
                       <div class="d-flex justify-content-end"><a href="services.html">Tất cả dự án<i
                             class="ion-md-arrow-forward pl-2"></i></a></div>
                     </div>
@@ -321,11 +429,11 @@
     <!-- Project End -->
 
     <!-- Contact Start -->
-    <section class="ftco-counter ftco-section">
+    <section class="ftco-counter ftco-section" id="contact">
     	<div class="container">
     		<div class="row">
           <div class="col-lg-6 justify-content-center counter-wrap ftco-animate">
-            <img class="w-100" src="./images/icon-contact.svg" alt="">
+            <img class="w-100" src="./images/svg-contact.svg" alt="">
           </div>
           <div class="col-lg-6 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="d-flex flex-column heading-section ftco-animate">
@@ -384,6 +492,12 @@
       </div>
     </footer>
     <!-- Footer End -->
+    
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+
+
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -400,6 +514,7 @@
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/google-map.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
     
   </body>

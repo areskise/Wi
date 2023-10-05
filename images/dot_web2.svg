@@ -1,0 +1,31 @@
+<svg width="51" height="53" viewBox="0 0 51 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.2" d="M4 1.5H47C48.3807 1.5 49.5 2.61929 49.5 4V49C49.5 50.3807 48.3807 51.5 47 51.5H4C2.61929 51.5 1.5 50.3807 1.5 49V4C1.5 2.61929 2.61929 1.5 4 1.5Z" stroke="url(#paint0_linear_1078_365)" stroke-width="3"/>
+<rect x="6.20508" y="15.3477" width="38.678" height="7.86071" rx="1" stroke="url(#paint1_linear_1078_365)" stroke-width="2"/>
+<rect x="1" y="-1" width="16.4865" height="13.6194" rx="1" transform="matrix(1 0 0 -1 5.20508 43.832)" stroke="url(#paint2_linear_1078_365)" stroke-width="2"/>
+<rect x="1" y="-1" width="16.4865" height="13.6194" rx="1" transform="matrix(1 0 0 -1 27.4355 43.832)" stroke="url(#paint3_linear_1078_365)" stroke-width="2"/>
+<rect x="3" y="9" width="45" height="1" fill="#EEEEEE"/>
+<rect opacity="0.8" x="41.0491" y="5.39483" width="4.37022" height="0.758418" rx="0.379209" fill="#EEEEEE" stroke="#EEEEEE" stroke-width="0.758418"/>
+<rect opacity="0.8" x="31.3968" y="5.39483" width="8.56482" height="0.758418" rx="0.379209" fill="#EEEEEE" stroke="#EEEEEE" stroke-width="0.758418"/>
+<circle cx="29.4293" cy="5.77498" r="0.5" fill="#EEEEEE" stroke="#EEEEEE" stroke-width="0.549954"/>
+<circle cx="5.98005" cy="5.77498" r="0.5" fill="#EEEEEE" stroke="#EEEEEE" stroke-width="0.549954"/>
+<circle cx="7.90974" cy="5.77498" r="0.5" fill="#EEEEEE" stroke="#EEEEEE" stroke-width="0.549954"/>
+<circle cx="9.8365" cy="5.77498" r="0.5" fill="#EEEEEE" stroke="#EEEEEE" stroke-width="0.549954"/>
+<defs>
+<linearGradient id="paint0_linear_1078_365" x1="-3.39445" y1="-4.45355" x2="56.3395" y2="54.871" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#0058FF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1078_365" x1="45.8831" y1="24.2084" x2="45.8831" y2="14.3477" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6B6B6B" stop-opacity="0.1"/>
+<stop offset="1" stop-color="#EEEEEE" stop-opacity="0.5"/>
+</linearGradient>
+<linearGradient id="paint2_linear_1078_365" x1="18.4865" y1="15.6194" x2="18.4868" y2="-3.08274e-07" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6B6B6B" stop-opacity="0.1"/>
+<stop offset="1" stop-color="#EEEEEE" stop-opacity="0.5"/>
+</linearGradient>
+<linearGradient id="paint3_linear_1078_365" x1="18.4865" y1="15.6194" x2="18.4868" y2="-3.08274e-07" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6B6B6B" stop-opacity="0.1"/>
+<stop offset="1" stop-color="#EEEEEE" stop-opacity="0.5"/>
+</linearGradient>
+</defs>
+</svg>
