@@ -505,8 +505,9 @@ pre {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   /* width: 100%; */
-  margin-right: -15px;
-  margin-left: -15px; }
+  /* margin-right: -15px;
+  margin-left: -15px; */
+ }
 
 .no-gutters {
   margin-right: 0;
@@ -3881,7 +3882,9 @@ input[type="button"].btn-block {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1.25rem; }
+  transform: scale(100%);
+  transition: transform 1s ease-in-out;
+ }
 
 .card-img {
   width: 100%;
@@ -11167,4 +11170,95 @@ textarea.form-control {
 .fullscreen .gallery-thumbs:hover {
   opacity: 1;
   transition-delay: 0s;
+}
+
+.prj-content {
+  position: relative;
+}
+.prj-content img {
+  transform: scale(100%);
+  transition: transform 1s ease-in-out;
+}
+.prj-img {
+  overflow: hidden;
+}
+.prj-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 64px;
+  display: none;
+  transform: rotate(-45deg);
+  padding: 0px 32px;
+}
+.prj-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  padding: 32px 6%;
+}
+.prj-text .prj-name,
+.prj-text .prj-icon {
+  font-size: 36px;
+  line-height: 64px;
+  color: #fff;
+  margin: 0;
+  font-weight: 300;
+}
+.prj-text .prj-type {
+  font-size: 24px;
+  line-height: 64px;
+  color: #fff;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 1199.98px) {
+  .prj-text .prj-name {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .prj-text .prj-type {
+    line-height: 32px;
+  }
+  .prj-icon {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 588px) {
+  .prj-text {
+    padding: 32px 8%;
+  }
+
+  .prj-text .prj-name{
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .prj-text .prj-type {
+    font-size: 24px;
+    line-height: 18px;
+  }
+
+  .prj-icon {
+    font-size: 32px;
+    padding: 16px 32px;
+  }
+}
+
+.prj-content:hover .card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+.prj-content:hover .prj-text ,
+.prj-content:hover .prj-icon {
+  display: block;
+  cursor: pointer;
+}
+.prj-content:hover img {
+  transform: scale(110%);
+  cursor: pointer;
 }
