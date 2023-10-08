@@ -11190,6 +11190,7 @@ textarea.form-control {
   display: none;
   transform: rotate(-45deg);
   padding: 0px 32px;
+  z-index: 2;
 }
 .prj-text {
   position: absolute;
@@ -11198,14 +11199,15 @@ textarea.form-control {
   display: none;
   width: 100%;
   padding: 32px 6%;
+  z-index: 2;
 }
-.prj-text .prj-name,
-.prj-text .prj-icon {
+.prj-text .prj-name {
   font-size: 36px;
   line-height: 64px;
   color: #fff;
   margin: 0;
   font-weight: 300;
+  
 }
 .prj-text .prj-type {
   font-size: 24px;
@@ -11261,4 +11263,112 @@ textarea.form-control {
 .prj-content:hover img {
   transform: scale(110%);
   cursor: pointer;
+}
+
+/* Popup Styling */
+.img-popup {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.img-popup img {
+  /* max-width: 1920px; */
+  /* margin: 24px 0px; */
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-100px);
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+}
+
+.text-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), #000);
+  text-align: center;
+  /* display: none; */
+}
+
+.text-popup .popup-name {
+  color: #fff;
+  font-size: 36px;
+}
+.text-popup .popup-field {
+  color: #fff;
+  font-size: 24px;
+}
+
+.img-popup:hover .text-popup {
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.btn-prev {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.btn-next {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.close-btn:hover,
+.btn-next:hover,
+.btn-prev:hover {
+  opacity: 1;
+}
+
+.close-btn .ion-md-close-circle,
+.btn-next .icon-arrow-circle-left,
+.btn-prev .icon-arrow-circle-right {
+  font-size: 32px;
+}
+
+.opened {
+  display: flex;
+}
+
+.opened img {
+  animation: animatepopup 1s ease-in-out .8s;
+  -webkit-animation: animatepopup .3s ease-in-out forwards;
+}
+
+@keyframes animatepopup {
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+
 }

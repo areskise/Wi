@@ -95,32 +95,22 @@ const projects = [
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelector.bind(document)
 
-const player = $('.player')
+const projectF = $('.projectF')
+const projectS = $('.projectS')
 const project1F = $('.project1F')
 const project2F = $('.project2F')
 const project3F = $('.project3F')
 const project1S = $('.project1S')
 const project2S = $('.project2S')
 const project3S = $('.project3S')
-const cd = $('.cd')
-const heading = $('header h2')
-const singer = $('header p')
-const cdThumb = $('.cd-thumb')
-const audio = $('#audio')
-const playBtn = $('.btn-toggle-play')
-const progress = $('#progress')
+const imgPopup = $('.img-popup');
+const popupImage = $('.img-popup img');
+const closeBtn = $('.close-btn');
 const nextBtn = $('.btn-next')
 const prevBtn = $('.btn-prev')
-const randomBtn = $('.btn-random')
-const repeatBtn = $('.btn-repeat')
 
 const app = {
   currentIndex: 0,
-  isPlaying: false,
-  isTimeupdate: true,
-  isRandom: false,
-  isRepeat: false,
-
   projects: projects,
   
   render: function() {
@@ -128,14 +118,14 @@ const app = {
       if (index === 0) {
         return(
         `
-        <div href="#" class="d-flex h-100 flex-column prj-content">
+        <div class="d-flex h-100 flex-column prj-content" data-index="${index}">
           <div class="prj-img h-100 m-3">
             <img class="w-100 h-100" src="${project.image}" alt="${project.name}">
           </div>
-          <a class="card-img-overlay selected m-3"></a>
+          <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
             <h3 class="prj-name">${project.name}</h3>
-            <p class="prj-type">${project.type}</p>
+            <p class="prj-type">${project.field}</p>
           </div>
           <div class="prj-icon">
             <i class="ion-md-arrow-forward"></i>
@@ -151,14 +141,14 @@ const app = {
       if (index === 1 || index === 2) {
         return(
         `
-        <div class="prj-content">
+        <div class="prj-content" data-index="${index}">
           <div class="prj-img m-3">
             <img class="w-100" src="${project.image}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
             <h3 class="prj-name">${project.name}</h3>
-            <p class="prj-type">${project.type}</p>
+            <p class="prj-type">${project.field}</p>
           </div>
           <div class="prj-icon">
             <i class="ion-md-arrow-forward"></i>
@@ -174,14 +164,14 @@ const app = {
       if (index === 3 || index === 4 || index === 5) {
         return(
         `
-        <div class="col-lg-4 p-0 prj-content">
+        <div class="col-lg-4 p-0 prj-content" data-index="${index}">
           <div class="prj-img m-3">
             <img class="w-100" src="${project.image}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
             <h3 class="prj-name">${project.name}</h3>
-            <p class="prj-type">${project.type}</p>
+            <p class="prj-type">${project.field}</p>
           </div>
           <div class="prj-icon">
             <i class="ion-md-arrow-forward"></i>
@@ -197,14 +187,14 @@ const app = {
       if (index === 8) {
         return(
         `
-        <div class="d-flex h-100 flex-column prj-content">
+        <div class="d-flex h-100 flex-column prj-content" data-index="${index}">
           <div class="prj-img h-100 m-3">
             <img class="w-100 h-100" src="${project.image}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
             <h3 class="prj-name">${project.name}</h3>
-            <p class="prj-type">${project.type}</p>
+            <p class="prj-type">${project.field}</p>
           </div>
           <div class="prj-icon">
             <i class="ion-md-arrow-forward"></i>
@@ -220,14 +210,14 @@ const app = {
       if (index === 6 || index === 7) {
         return(
         `
-        <div class="prj-content">
+        <div class="prj-content" data-index="${index}">
           <div class="prj-img m-3">
             <img class="w-100" src="${project.image}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
             <h3 class="prj-name">${project.name}</h3>
-            <p class="prj-type">${project.type}</p>
+            <p class="prj-type">${project.field}</p>
           </div>
           <div class="prj-icon">
             <i class="ion-md-arrow-forward"></i>
@@ -243,14 +233,14 @@ const app = {
       if (index === 9 || index === 10 || index === 11) {
         return(
         `
-        <div class="col-lg-4 p-0 prj-content">
+        <div class="col-lg-4 p-0 prj-content" data-index="${index}">
           <div class="prj-img m-3">
             <img class="w-100" src="${project.image}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
             <h3 class="prj-name">${project.name}</h3>
-            <p class="prj-type">${project.type}</p>
+            <p class="prj-type">${project.field}</p>
           </div>
           <div class="prj-icon">
             <i class="ion-md-arrow-forward"></i>
@@ -268,78 +258,93 @@ const app = {
     const types = projects.map(res=>res.type)
     const fields = projects.map(res=>res.field)
 
-    // Khi nhấn nút tới bài hát
     nextBtn.onclick = function() {
-      if (_this.isRandom) {
-        _this.randomSong()
+      _this.currentIndex++;
+      if(_this.currentIndex >= _this.projects.length) {
+        _this.currentIndex = 0
       }
-      else {
-        _this.nextSong()
-      }
-      audio.play()
-      _this.render()
-      _this.crollToActiveSong()
+      const targetPrj = _this.projects[_this.currentIndex];
+        const img = imgPopup.children[0];
+        img.setAttribute('src', targetPrj.image);
+        const popupName = imgPopup.children[2].children[0];
+        const popupField = imgPopup.children[2].children[1];
+        popupName.textContent = targetPrj.name;
+        popupField.textContent = targetPrj.field;
     }
 
-    // Khi nhấn nút lùi bài hát
     prevBtn.onclick = function() {
-      if (_this.isRandom) {
-        _this.randomSong()
+      _this.currentIndex--;
+      if(_this.currentIndex < 0) {
+        _this.currentIndex = _this.projects.length - 1
       }
-      else {
-        _this.prevSong()
-      }
-      audio.play()
-      _this.render()
-      _this.crollToActiveSong()
-    }
-
-    // Khi bật tắt random bài hát
-    randomBtn.onclick = function() {
-      _this.isRandom = !_this.isRandom
-      randomBtn.classList.toggle('active', _this.isRandom)
+      const targetPrj = _this.projects[_this.currentIndex];
+        const img = imgPopup.children[0];
+        img.setAttribute('src', targetPrj.image);
+        const popupName = imgPopup.children[2].children[0];
+        const popupField = imgPopup.children[2].children[1];
+        popupName.textContent = targetPrj.name;
+        popupField.textContent = targetPrj.field;
     }
 
     // Khi bật tắt lặp lại 1 bài hát
-    repeatBtn.onclick = function() {
-      _this.isRepeat = !_this.isRepeat
-      repeatBtn.classList.toggle('active', _this.isRepeat)
-    }
+    // repeatBtn.onclick = function() {
+    //   _this.isRepeat = !_this.isRepeat
+    //   repeatBtn.classList.toggle('active', _this.isRepeat)
+    // }
 
     // Xử lý next song khi audio ended
-    audio.onended = function() {
-      if(_this.isRepeat) {
-        audio.play()
-      }
-      else {
-        nextBtn.click()
+    // audio.onended = function() {
+    //   if(_this.isRepeat) {
+    //     audio.play()
+    //   }
+    //   else {
+    //     nextBtn.click()
+    //   }
+    // }
+
+    projectF.onclick = function (e) {
+      const target = e.target.closest('.prj-content');
+      if(target) {
+        const targetIndex = Number(target.dataset.index);
+        _this.currentIndex = targetIndex;
+        const targetPrj = _this.projects[targetIndex];
+        const img = imgPopup.children[0];
+        img.setAttribute('src', targetPrj.image);
+        imgPopup.classList.add('opened');
+        const popupName = imgPopup.children[2].children[0];
+        const popupField = imgPopup.children[2].children[1];
+        popupName.textContent = targetPrj.name;
+        popupField.textContent = targetPrj.field;
+
       }
     }
 
-    // Lắng nghe hành vi click vào playlist
-    playlist.onclick = function(e) {
-      const songTarget = e.target.closest('.song:not(.active)')
-      const optionTarget = e.target.closest('.option')
-
-      if(songTarget || optionTarget) {
-        // Xử lý khi click vào bài hát
-        if(songTarget) {
-          _this.currentIndex = Number(songTarget.dataset.index)
-          _this.loadCurrentSong()
-          _this.render()
-          _this.crollToActiveSong()
-          audio.play()
-        }
+    projectS.onclick = function (e) {
+      const target = e.target.closest('.prj-content');
+      if(target) {
+        const targetIndex = Number(target.dataset.index);
+        _this.currentIndex = targetIndex;
+        const targetPrj = _this.projects[targetIndex];
+        const img = imgPopup.children[0];
+        img.setAttribute('src', targetPrj.image);
+        imgPopup.classList.add('opened');
+        const popupName = imgPopup.children[2].children[0];
+        const popupField = imgPopup.children[2].children[1];
+        popupName.textContent = targetPrj.name;
+        popupField.textContent = targetPrj.field;
       }
+    }
+
+     closeBtn.onclick = function() {
+      const img = imgPopup.children[0];
+      img.setAttribute('src', '');
+      imgPopup.classList.remove('opened');
     }
   },
   
   start: function() {
     // Lắng nghe và xử lý các sự kiện (DOM events)
-    // this.handleEvents()
-
-    // Tải thông tin bài hát đầu tiên vào UI khi chạy ứng dụng
-    // this.loadCurrentSong()
+    this.handleEvents()
 
     // Render playlist
     this.render()
