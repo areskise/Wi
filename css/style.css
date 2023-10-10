@@ -44,6 +44,12 @@ html {
   font-family: 'Nunito', sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -9155,15 +9161,15 @@ h1, h2, h3, h4, h5,
   animation-fill-mode: forwards; */
 }
 .section-services .svg-like{
-  top: 14%;
-  left: 7%;
+  top: 30%;
+  left: 8%;
   width: 9%;
   height: auto;
   /* animation: parallax 1s ease-in-out infinite alternate; */
 }
 .section-services .svg-ht {
-  top: 22%;
-  right: 1%;
+  top: 32%;
+  right: 2%;
   width: 10%;
   height: auto;
   /* animation: easing 2s ease-out infinite;
@@ -9171,8 +9177,8 @@ h1, h2, h3, h4, h5,
   animation: slide 1s ease-in-out infinite alternate; */
 }
 .section-services .svg-heart {
-  bottom: 22%;
-  left: 2%;
+  bottom: -16%;
+  left: 3%;
   width: 4%;
   height: auto;
   /* animation: sticker-pulse 1.2s infinite; */
@@ -9280,12 +9286,12 @@ h1, h2, h3, h4, h5,
 }
 
 .svg-design {
-    top: 0%;
+    top: 30%;
     left: -3%;
     width: 11%;
 }
 .svg-chart {
-  top: 0%;
+  top: 30%;
   right: -3%;
   width: 20%;
 }
@@ -9508,7 +9514,7 @@ h1, h2, h3, h4, h5,
 }
 
 .section-customer .svg-smile {
-  bottom: 20%;
+  bottom: 10%;
   right: 4%;
   width: 8%;
   height: auto;
@@ -10140,7 +10146,7 @@ textarea.form-control {
 .ftco-counter {
   position: relative; 
   width: 100%;
-  padding-top: 33%;
+  padding-top: 36%;
   background-size: cover;
   background-repeat: no-repeat;
   /* background-position: center; */
@@ -10896,44 +10902,44 @@ textarea.form-control {
   margin: 0 auto;
 }
 
-.ag-404_img-box {
-  margin: 50px auto;
+.ag_img-box {
+  /* margin: 50px auto; */
 
   z-index: 10;
   position: relative;
 }
 
-.ag-404_img {
-  max-width: 100%;
+.ag_img {
+  width: 100%;
 }
 
-.ag-404_img__first {
+.ag_img__first {
   position: absolute;
   top: 0;
   left: 0;
 
-  -webkit-animation: an-upDown 2s infinite;
+  /* -webkit-animation: an-upDown 2s infinite;
   -moz-animation: an-upDown 2s infinite;
   -o-animation: an-upDown 2s infinite;
-  animation: an-upDown 2s infinite;
+  animation: an-upDown 2s infinite; */
 }
 
-.ag-404_img__last {
+.ag_img__last {
   position: absolute;
   top: 0;
   left: 0;
 
-  -webkit-animation: an-upDownInvert 2s infinite;
+  /* -webkit-animation: an-upDownInvert 2s infinite;
   -moz-animation: an-upDownInvert 2s infinite;
   -o-animation: an-upDownInvert 2s infinite;
-  animation: an-upDownInvert 2s infinite;
+  animation: an-upDownInvert 2s infinite; */
 }
 
 .bell-about {
-  -webkit-animation: bell 4s infinite;
+  /* -webkit-animation: bell 4s infinite;
   -moz-animation: bell 4s infinite;
   -o-animation: bell 4s infinite;
-  animation: bell 4s infinite;
+  animation: bell 4s infinite; */
 }
 
 @-webkit-keyframes an-upDown {

@@ -2,41 +2,40 @@
 // field: Lĩnh vực
 // type: Loại dự án
 // image: Đường dẫn thư mục hình ảnh
-
 const projects = [
     //Data project 1
     {
       name: "Bài Này Không Để Đi Diễn",
       field: "Anh Tú Atus",
-      type: "Anh Tú Atus",
+      type: "BrandCom",
       image: "./assets/img/project1.png"
     },
     //Data project 2
     {
       name: "Chuyện Đôi Ta",
       field: "Emcee L (Da LAB), Muộii",
-      type: "Emcee L (Da LAB), Muộii",
+      type: "Digital Marketing",
       image: "./assets/img/project2.png"
     },
     //Data project 3
     {
       name: "Hai Mươi Hai (22)",
       field: "Hứa Kim Tuyền, AMEE",
-      type: "Hứa Kim Tuyền, AMEE",
+      type: "Website",
       image: "./assets/img/project3.png"
     },
     //Data project 4
     {
       name: "Waiting For You",
       field: "MONO, Onionn",
-      type: "MONO, Onionn",
+      type: "Website",
       image: "./assets/img/project4.png"
     },
     //Data project 5
     {
       name: "Yêu Anh",
       field: "Miu Lê",
-      type: "Miu Lê",
+      type: "Mobile App",
       image: "./assets/img/project5.png"
         
     },
@@ -44,49 +43,49 @@ const projects = [
     {
       name: "Bài Tình Ca Đầu Tiên",
       field: "Duy Khoa",
-      type: "Duy Khoa",
+      type: "Mobile App",
       image: "./assets/img/project6.png"
     },
     //Data project 7
     {
       name: "Chưa Quên Người Yêu Cũ",
       field: "Hà Nhi",
-      type: "Hà Nhi",
+      type: "Mobile App",
       image: "./assets/img/project7.png"
     },
     //Data project 8
     {
       name: "Vì Mẹ Anh Bắt Chia Tay",
       field: "Miu Lê, Karik, Châu Đăng Khoa",
-      type: "Miu Lê, Karik, Châu Đăng Khoa",
+      type: "Website",
       image: "./assets/img/project8.png"
     },
     //Data project 9
     {
       name: "Hỏi Thăm",
       field: "Vũ Cát Tường",
-      type: "Vũ Cát Tường",
+      type: "Website",
       image: "./assets/img/project9.png"
     },
     //Data project 10
     {
       name: "Mặt Mộc",
       field: "Phạm Nguyên Ngọc, VAnh, Ân Nhi",
-      type: "Phạm Nguyên Ngọc, VAnh, Ân Nhi",
+      type: "Website",
       image: "./assets/img/project10.png"
     },
     //Data project 11
     {
       name: "Lời Tạm Biệt Chưa Nói",
       field: "GREY D, Orange",
-      type: "GREY D, Orange",
+      type: "Digital Marketing",
       image: "./assets/img/project11.png"
     },
     //Data project 12
     {
       name: "Yêu Đương Khó Quá Thì Chạy Về Khóc Với Anh",
       field: "ERIK",
-      type: "ERIK",
+      type: "BrandCom",
       image: "./assets/img/project12.png"
     },
 ]
@@ -111,9 +110,28 @@ const prevBtn = $('.btn-prev')
 
 const app = {
   currentIndex: 0,
-  projects: projects,
+  types: projects.map(res=>res.type),
+  fields: projects.map(res => res.field),
+  currentType: 'Website',
+  currentField: 'Tất cả',
+  projects: projects.map(res => {
+      if (this.currentType !== 'Tất cả') {
+        if (res.type === this.currentType) {
+          console.log(res);
+          return res
+        }
+      }
+      return res
+    }).map(res => {
+      if (this.currentField !== 'Tất cả') {
+        if (res.field === this.currentField) {
+          return res
+        }
+      }
+      return res
+    }),
   
-  render: function() {
+  render: function () {
     const htmls1F = this.projects.map((project, index) => {
       if (index === 0) {
         return(
@@ -255,8 +273,6 @@ const app = {
 
   handleEvents: function() {
     const _this = this
-    const types = projects.map(res=>res.type)
-    const fields = projects.map(res=>res.field)
 
     nextBtn.onclick = function() {
       _this.currentIndex++;
@@ -285,22 +301,6 @@ const app = {
         popupName.textContent = targetPrj.name;
         popupField.textContent = targetPrj.field;
     }
-
-    // Khi bật tắt lặp lại 1 bài hát
-    // repeatBtn.onclick = function() {
-    //   _this.isRepeat = !_this.isRepeat
-    //   repeatBtn.classList.toggle('active', _this.isRepeat)
-    // }
-
-    // Xử lý next song khi audio ended
-    // audio.onended = function() {
-    //   if(_this.isRepeat) {
-    //     audio.play()
-    //   }
-    //   else {
-    //     nextBtn.click()
-    //   }
-    // }
 
     projectF.onclick = function (e) {
       const target = e.target.closest('.prj-content');
