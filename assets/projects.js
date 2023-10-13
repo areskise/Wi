@@ -94,6 +94,7 @@ const projects = [
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelector.bind(document)
 
+const projectFilter = $('.projectFilter')
 const projectF = $('.projectF')
 const projectS = $('.projectS')
 const project1F = $('.project1F')
@@ -105,34 +106,96 @@ const project3S = $('.project3S')
 const imgPopup = $('.img-popup');
 const popupImage = $('.img-popup img');
 const closeBtn = $('.close-btn');
-const nextBtn = $('.btn-next')
-const prevBtn = $('.btn-prev')
+const nextBtn = $('.btn-next');
+const prevBtn = $('.btn-prev');
+
 
 const app = {
   currentIndex: 0,
   types: projects.map(res=>res.type),
   fields: projects.map(res => res.field),
-  currentType: 'Website',
+  currentType: 'Tất cả',
   currentField: 'Tất cả',
-  projects: projects.map(res => {
-      if (this.currentType !== 'Tất cả') {
+  projects: projects,
+  
+  render: function () {
+    const currentProjects = this.projects.filter(res => {
+    if (this.currentType === 'Tất cả') {
+      return res
+    } else {
         if (res.type === this.currentType) {
-          console.log(res);
           return res
         }
       }
-      return res
-    }).map(res => {
-      if (this.currentField !== 'Tất cả') {
+    }).filter(res => {
+      if (this.currentField === 'Tất cả') {
+        return res
+      } else {
         if (res.field === this.currentField) {
           return res
         }
       }
-      return res
-    }),
-  
-  render: function () {
-    const htmls1F = this.projects.map((project, index) => {
+    })
+    let uniqueTypes = []
+    for (let i = 0; i < this.types.length; i++) {
+      if (!uniqueTypes.map(type=>type).includes(this.types[i])) {
+        uniqueTypes.push(this.types[i]);
+      }
+    }
+    let uniqueFields = []
+    for (let i = 0; i < this.fields.length; i++) {
+      if (!uniqueFields.map(field=>field).includes(this.fields[i])) {
+        uniqueFields.push(this.fields[i]);
+      }
+    }
+
+    const htmlsFilter = 
+        `
+        <div class="d-flex justify-content-center">
+          <div class="d-flex m-5">
+            <div className='label'>
+              <label htmlFor="" class="nav-link m-0">Dự án:</label>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">${this.currentType}</a>
+              <div class="dropdown-menu bg-light mt-2">
+              <a href="#" class="type dropdown-item ${this.currentType === 'Tất cả' ? 'active' : ''}">Tất cả</a>
+              ,
+              ${uniqueTypes.map(type => {
+                if (this.currentType===type) {
+                  return "<a href='#' class='type dropdown-item active'>"+type+"</a>"
+                } else {
+                  return "<a href='#' class='type dropdown-item'>"+type+"</a>"
+                }
+              })}
+              </div>
+            </div>
+          </div>
+          <div class="d-flex m-5">
+            <div className='label'>
+              <label htmlFor="" class="nav-link m-0">Dự án:</label>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">${this.currentField}</a>
+              <div class="dropdown-menu bg-light mt-2">
+              <a href="#" class="field dropdown-item ${this.currentField === 'Tất cả' ? 'active' : ''}">Tất cả</a>
+              ,
+              ${uniqueFields.map(field => {
+                if (this.currentField===field) {
+                  return "<a href='#' class='field dropdown-item active'>"+field+"</a>"
+                } else {
+                  return "<a href='#' class='field dropdown-item'>"+field+"</a>"
+                }
+              })}
+              </div>
+            </div>
+          </div>
+        </div>
+        `
+
+    projectFilter.innerHTML = htmlsFilter
+
+    const htmls1F = currentProjects.map((project, index) => {
       if (index === 0) {
         return(
         `
@@ -155,7 +218,7 @@ const app = {
     })
     project1F.innerHTML = htmls1F.join('')
 
-    const htmls2F = this.projects.map((project, index) => {
+    const htmls2F = currentProjects.map((project, index) => {
       if (index === 1 || index === 2) {
         return(
         `
@@ -178,7 +241,7 @@ const app = {
     })
     project2F.innerHTML = htmls2F.join('')
 
-    const htmls3F = this.projects.map((project, index) => {
+    const htmls3F = currentProjects.map((project, index) => {
       if (index === 3 || index === 4 || index === 5) {
         return(
         `
@@ -201,7 +264,7 @@ const app = {
     })
     project3F.innerHTML = htmls3F.join('')
 
-    const htmls1S = this.projects.map((project, index) => {
+    const htmls1S = currentProjects.map((project, index) => {
       if (index === 8) {
         return(
         `
@@ -224,7 +287,7 @@ const app = {
     })
     project1S.innerHTML = htmls1S.join('')
 
-    const htmls2S = this.projects.map((project, index) => {
+    const htmls2S = currentProjects.map((project, index) => {
       if (index === 6 || index === 7) {
         return(
         `
@@ -247,7 +310,7 @@ const app = {
     })
     project2S.innerHTML = htmls2S.join('')
 
-    const htmls3S = this.projects.map((project, index) => {
+    const htmls3S = currentProjects.map((project, index) => {
       if (index === 9 || index === 10 || index === 11) {
         return(
         `
@@ -274,6 +337,18 @@ const app = {
   handleEvents: function() {
     const _this = this
 
+    projectFilter.onclick = function (e) {
+      const className = e.target.className
+      if (className.includes('type dropdown-item')) {
+        _this.currentType = e.target.textContent
+        _this.render()
+      }
+      if (className.includes('field dropdown-item')) {
+        _this.currentField = e.target.textContent
+        _this.render()
+      }
+    }
+      
     nextBtn.onclick = function() {
       _this.currentIndex++;
       if(_this.currentIndex >= _this.projects.length) {

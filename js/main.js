@@ -247,7 +247,7 @@
 			loop: true,
 			autoplay: true,
 			items:1,
-			margin: 30,
+			margin: 0,
 			stagePadding: 0,
 			nav: true,
 			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],

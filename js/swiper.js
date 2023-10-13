@@ -99,26 +99,35 @@ $(document).mousemove(function(event) {
 });
 
 $(document).scroll(function () {
-  console.log(this);
 	scrollPos = $(this).scrollTop();
   var height = screen.availHeight;
-	$('.svg-like').css({
-		'opacity': (scrollPos-(height/3))*2/height
+  $('.svg-like').css({
+    'animation': (scrollPos - (height / 3)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+    'animation-fill-mode': 'forwards'
   });
   $('.svg-ht').css({
-		'opacity': (scrollPos-(height/2.5))*2/height
+    'animation': (scrollPos - (height / 2.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in' : 'fadeOutDown 1s ease-in',
+    'animation-fill-mode': 'forwards'
+    
   });
   $('.svg-heart').css({
-		'opacity': (scrollPos-(height/1.25))*2/height
+    'animation': (scrollPos - (height / 1.25)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+    'animation-fill-mode': 'forwards'
+    
   });
-   $('.svg-design').css({
-		'opacity': (scrollPos-(height*1.1))*2/height
+  $('.svg-design').css({
+    'animation': (scrollPos - (height * 1.1)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+    'animation-fill-mode': 'forwards'
+    
    });
    $('.svg-chart').css({
-		'opacity': (scrollPos-(height*1.1))*2/height
+     'animation': (scrollPos - (height * 1.1)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+    'animation-fill-mode': 'forwards'
+     
    });
   $('.svg-smile').css({
-		'opacity': (scrollPos-(height*2.1))*2/height
+    'animation': (scrollPos - (height * 2.1)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+    'animation-fill-mode': 'forwards'
+    
 	});
 });
-
