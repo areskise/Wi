@@ -102,31 +102,31 @@ $(document).scroll(function () {
 	scrollPos = $(this).scrollTop();
   var height = screen.availHeight;
   $('.svg-like').css({
-    'animation': (scrollPos - (height / 3)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+    'animation': (scrollPos - (height / 2.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
   });
   $('.svg-ht').css({
-    'animation': (scrollPos - (height / 2.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in' : 'fadeOutDown 1s ease-in',
+    'animation': (scrollPos - (height / 2)) * 2 / height > 0 ? 'fadeInUp 1s ease-in' : 'fadeOutDown 1s ease-in',
     'animation-fill-mode': 'forwards'
     
   });
   $('.svg-heart').css({
-    'animation': (scrollPos - (height / 1.25)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+    'animation': (scrollPos - (height)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
     
   });
   $('.svg-design').css({
-    'animation': (scrollPos - (height * 1.1)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+    'animation': (scrollPos - (height * 1.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
     
    });
    $('.svg-chart').css({
-     'animation': (scrollPos - (height * 1.1)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+     'animation': (scrollPos - (height * 1.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
      
    });
   $('.svg-smile').css({
-    'animation': (scrollPos - (height * 2.1)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+    'animation': (scrollPos - (height * 2.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
     
 	});

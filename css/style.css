@@ -9172,7 +9172,7 @@ h1, h2, h3, h4, h5,
   /* animation: parallax 1s ease-in-out infinite alternate; */
 }
 .section-services .svg-ht {
-  top: 10%;
+  top: 15%;
   right: 2%;
   width: 10%;
   height: auto;
@@ -9181,7 +9181,7 @@ h1, h2, h3, h4, h5,
   animation: slide 1s ease-in-out infinite alternate; */
 }
 .section-services .svg-heart {
-  bottom: 20%;
+  bottom: 26%;
   left: 3%;
   width: 4%;
   height: auto;
@@ -9307,7 +9307,7 @@ h1, h2, h3, h4, h5,
 
   .svg-chart {
     right: -3%;
-  width: 20%;
+    width: 20%;
   }
 }
 
@@ -9326,6 +9326,7 @@ h1, h2, h3, h4, h5,
     width: 20%;
   }
   .svg-chart {
+    top: -14%;
     right: -3%;
     width: 34%;
   }
@@ -10260,7 +10261,7 @@ textarea.form-control {
 .ftco-counter {
   position: relative; 
   width: 100%;
-  padding-top: 36%;
+  padding-top: 40%;
   background-size: cover;
   background-repeat: no-repeat;
   /* background-position: center; */
@@ -10450,6 +10451,7 @@ textarea.form-control {
 
 .contact-section {
   margin-top: 80px;
+  margin-bottom: 32px;
 }
 
 .contact-form {
