@@ -8,35 +8,68 @@ const projects = [
       name: "Bài Này Không Để Đi Diễn",
       field: "Anh Tú Atus",
       type: "BrandCom",
-      image: "./assets/img/project1.png"
+      image: [
+        "./assets/img/project1/project1.png",
+        "./assets/img/project1/car-1.jpg",
+        "./assets/img/project1/car-2.jpg",
+        "./assets/img/project1/car-3.jpg",
+        "./assets/img/project1/car-4.jpg",
+        "./assets/img/project1/car-5.jpg",
+      ]
     },
     //Data project 2
     {
       name: "Chuyện Đôi Ta",
       field: "Emcee L (Da LAB), Muộii",
       type: "Digital Marketing",
-      image: "./assets/img/project2.png"
+      image: [
+        "./assets/img/project2/project2.png",
+        "./assets/img/project2/person_1.jpg",
+        "./assets/img/project2/person_2.jpg",
+        "./assets/img/project2/person_3.jpg",
+        "./assets/img/project2/person_4.jpg",
+      ]
     },
     //Data project 3
     {
       name: "Hai Mươi Hai (22)",
       field: "Hứa Kim Tuyền, AMEE",
       type: "Website",
-      image: "./assets/img/project3.png"
+      image: [
+        "./assets/img/project3/project3.png",
+        "./assets/img/project3/car-6.jpg",
+        "./assets/img/project3/car-7.jpg",
+        "./assets/img/project3/car-8.jpg",
+        "./assets/img/project3/car-9.jpg",
+      ]
     },
     //Data project 4
     {
       name: "Waiting For You",
       field: "MONO, Onionn",
       type: "Website",
-      image: "./assets/img/project4.png"
+      image: [
+        "./assets/img/project4/project4.png",
+        "./assets/img/project4/about.jpg",
+        "./assets/img/project4/car-10.jpg",
+        "./assets/img/project4/car-11.jpg",
+        "./assets/img/project4/car-12.jpg",
+      ]
     },
     //Data project 5
     {
       name: "Yêu Anh",
       field: "Miu Lê",
       type: "Mobile App",
-      image: "./assets/img/project5.png"
+      image: [
+        "./assets/img/project5/project5.png",
+        "./assets/img/project5/image_1.jpg",
+        "./assets/img/project5/image_2.jpg",
+        "./assets/img/project5/image_3.jpg",
+        "./assets/img/project5/image_4.jpg",
+        "./assets/img/project5/image_5.jpg",
+        "./assets/img/project5/image_6.jpg",
+      ]
         
     },
     //Data project 6
@@ -44,49 +77,105 @@ const projects = [
       name: "Bài Tình Ca Đầu Tiên",
       field: "Duy Khoa",
       type: "Mobile App",
-      image: "./assets/img/project6.png"
+      image: [
+        "./assets/img/project6/project6.png",
+        "./assets/img/project6/image_1.jpg",
+        "./assets/img/project6/image_2.jpg",
+        "./assets/img/project6/image_3.jpg",
+        "./assets/img/project6/image_4.jpg",
+        "./assets/img/project6/image_5.jpg",
+        "./assets/img/project6/image_6.jpg",
+      ]
     },
     //Data project 7
     {
       name: "Chưa Quên Người Yêu Cũ",
       field: "Hà Nhi",
       type: "Mobile App",
-      image: "./assets/img/project7.png"
+      image: [
+        "./assets/img/project7/project7.png",
+        "./assets/img/project7/image_1.jpg",
+        "./assets/img/project7/image_2.jpg",
+        "./assets/img/project7/image_3.jpg",
+        "./assets/img/project7/image_4.jpg",
+        "./assets/img/project7/image_5.jpg",
+        "./assets/img/project7/image_6.jpg",
+      ]
     },
     //Data project 8
     {
       name: "Vì Mẹ Anh Bắt Chia Tay",
       field: "Miu Lê, Karik, Châu Đăng Khoa",
       type: "Website",
-      image: "./assets/img/project8.png"
+      image: [
+        "./assets/img/project8/project8.png",
+        "./assets/img/project8/image_1.jpg",
+        "./assets/img/project8/image_2.jpg",
+        "./assets/img/project8/image_3.jpg",
+        "./assets/img/project8/image_4.jpg",
+        "./assets/img/project8/image_5.jpg",
+        "./assets/img/project8/image_6.jpg",
+      ]
     },
     //Data project 9
     {
       name: "Hỏi Thăm",
       field: "Vũ Cát Tường",
       type: "Website",
-      image: "./assets/img/project9.png"
+      image: [
+        "./assets/img/project9/project9.png",
+        "./assets/img/project9/image_1.jpg",
+        "./assets/img/project9/image_2.jpg",
+        "./assets/img/project9/image_3.jpg",
+        "./assets/img/project9/image_4.jpg",
+        "./assets/img/project9/image_5.jpg",
+        "./assets/img/project9/image_6.jpg",
+      ]
     },
     //Data project 10
     {
       name: "Mặt Mộc",
       field: "Phạm Nguyên Ngọc, VAnh, Ân Nhi",
       type: "Website",
-      image: "./assets/img/project10.png"
+      image: [
+        "./assets/img/project10/project10.png",
+        "./assets/img/project10/image_1.jpg",
+        "./assets/img/project10/image_2.jpg",
+        "./assets/img/project10/image_3.jpg",
+        "./assets/img/project10/image_4.jpg",
+        "./assets/img/project10/image_5.jpg",
+        "./assets/img/project10/image_6.jpg",
+      ]
     },
     //Data project 11
     {
       name: "Lời Tạm Biệt Chưa Nói",
       field: "GREY D, Orange",
       type: "Digital Marketing",
-      image: "./assets/img/project11.png"
+      image: [
+        "./assets/img/project11/project11.png",
+        "./assets/img/project11/image_1.jpg",
+        "./assets/img/project11/image_2.jpg",
+        "./assets/img/project11/image_3.jpg",
+        "./assets/img/project11/image_4.jpg",
+        "./assets/img/project11/image_5.jpg",
+        "./assets/img/project11/image_6.jpg",
+      ]
     },
     //Data project 12
     {
       name: "Yêu Đương Khó Quá Thì Chạy Về Khóc Với Anh",
       field: "ERIK",
       type: "BrandCom",
-      image: "./assets/img/project12.png"
+      image: [
+        "./assets/img/project12/project12.png",
+        "./assets/img/project12/image_1.jpg",
+        "./assets/img/project12/image_2.jpg",
+        "./assets/img/project12/image_3.jpg",
+        "./assets/img/project12/image_4.jpg",
+        "./assets/img/project12/image_5.jpg",
+        "./assets/img/project12/image_6.jpg",
+      ]
     },
 ]
 
@@ -94,6 +183,7 @@ const projects = [
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelector.bind(document)
 
+const body = $('body')
 const projectFilter = $('.projectFilter')
 const projectF = $('.projectF')
 const projectS = $('.projectS')
@@ -104,7 +194,7 @@ const project1S = $('.project1S')
 const project2S = $('.project2S')
 const project3S = $('.project3S')
 const imgPopup = $('.img-popup');
-const popupImage = $('.img-popup img');
+const popupImages = $('.popupImages');
 const closeBtn = $('.close-btn');
 const nextBtn = $('.btn-next');
 const prevBtn = $('.btn-prev');
@@ -201,7 +291,7 @@ const app = {
         `
         <div class="d-flex h-100 flex-column prj-content" data-index="${index}">
           <div class="prj-img h-100 m-3">
-            <img class="w-100 h-100" src="${project.image}" alt="${project.name}">
+            <img class="w-100 h-100" src="${project.image[0]}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
@@ -224,7 +314,7 @@ const app = {
         `
         <div class="prj-content" data-index="${index}">
           <div class="prj-img m-3">
-            <img class="w-100" src="${project.image}" alt="${project.name}">
+            <img class="w-100" src="${project.image[0]}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
@@ -247,7 +337,7 @@ const app = {
         `
         <div class="col-lg-4 p-0 prj-content" data-index="${index}">
           <div class="prj-img m-3">
-            <img class="w-100" src="${project.image}" alt="${project.name}">
+            <img class="w-100" src="${project.image[0]}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
@@ -270,7 +360,7 @@ const app = {
         `
         <div class="d-flex h-100 flex-column prj-content" data-index="${index}">
           <div class="prj-img h-100 m-3">
-            <img class="w-100 h-100" src="${project.image}" alt="${project.name}">
+            <img class="w-100 h-100" src="${project.image[0]}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
@@ -293,7 +383,7 @@ const app = {
         `
         <div class="prj-content" data-index="${index}">
           <div class="prj-img m-3">
-            <img class="w-100" src="${project.image}" alt="${project.name}">
+            <img class="w-100" src="${project.image[0]}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
@@ -316,7 +406,7 @@ const app = {
         `
         <div class="col-lg-4 p-0 prj-content" data-index="${index}">
           <div class="prj-img m-3">
-            <img class="w-100" src="${project.image}" alt="${project.name}">
+            <img class="w-100" src="${project.image[0]}" alt="${project.name}">
           </div>
           <div class="card-img-overlay m-3"></div>
           <div class="prj-text">
@@ -349,32 +439,46 @@ const app = {
       }
     }
       
-    nextBtn.onclick = function() {
+    nextBtn.onclick = function () {
+      imgPopup.scrollTo({top:0,behavior: "smooth"});
       _this.currentIndex++;
       if(_this.currentIndex >= _this.projects.length) {
         _this.currentIndex = 0
       }
       const targetPrj = _this.projects[_this.currentIndex];
-        const img = imgPopup.children[0];
-        img.setAttribute('src', targetPrj.image);
-        const popupName = imgPopup.children[2].children[0];
-        const popupField = imgPopup.children[2].children[1];
-        popupName.textContent = targetPrj.name;
-        popupField.textContent = targetPrj.field;
+      const popupName = imgPopup.children[2].children[0];
+      const popupField = imgPopup.children[2].children[1];
+      popupName.textContent = targetPrj.name;
+      popupField.textContent = targetPrj.field;
+      const prjImages = targetPrj.image;
+      const htmlsImages = prjImages.map(img => {
+        return (
+          `<img src="${img}" alt="Popup Image">`
+          )
+        })
+        popupImages.innerHTML = htmlsImages.join('')
+        // body.classList.add('ftco-overflow-hidden');     
     }
 
-    prevBtn.onclick = function() {
+    prevBtn.onclick = function () {
+      imgPopup.scrollTo({top:0,behavior: "smooth"});
       _this.currentIndex--;
       if(_this.currentIndex < 0) {
         _this.currentIndex = _this.projects.length - 1
       }
       const targetPrj = _this.projects[_this.currentIndex];
-        const img = imgPopup.children[0];
-        img.setAttribute('src', targetPrj.image);
         const popupName = imgPopup.children[2].children[0];
         const popupField = imgPopup.children[2].children[1];
         popupName.textContent = targetPrj.name;
         popupField.textContent = targetPrj.field;
+        const prjImages = targetPrj.image;
+        const htmlsImages = prjImages.map(img => {
+          return (
+            `<img src="${img}" alt="Popup Image">`
+            )
+          })
+        popupImages.innerHTML = htmlsImages.join('')
+        // body.classList.add('ftco-overflow-hidden');
     }
 
     projectF.onclick = function (e) {
@@ -383,14 +487,19 @@ const app = {
         const targetIndex = Number(target.dataset.index);
         _this.currentIndex = targetIndex;
         const targetPrj = _this.projects[targetIndex];
-        const img = imgPopup.children[0];
-        img.setAttribute('src', targetPrj.image);
         imgPopup.classList.add('opened');
         const popupName = imgPopup.children[2].children[0];
         const popupField = imgPopup.children[2].children[1];
         popupName.textContent = targetPrj.name;
         popupField.textContent = targetPrj.field;
-
+        const prjImages = targetPrj.image;
+        const htmlsImages = prjImages.map(img => {
+          return (
+            `<img src="${img}" alt="Popup Image">`
+          )
+        })
+        popupImages.innerHTML = htmlsImages.join('')
+        body.classList.add('ftco-overflow-hidden');
       }
     }
 
@@ -400,17 +509,24 @@ const app = {
         const targetIndex = Number(target.dataset.index);
         _this.currentIndex = targetIndex;
         const targetPrj = _this.projects[targetIndex];
-        const img = imgPopup.children[0];
-        img.setAttribute('src', targetPrj.image);
         imgPopup.classList.add('opened');
         const popupName = imgPopup.children[2].children[0];
         const popupField = imgPopup.children[2].children[1];
         popupName.textContent = targetPrj.name;
         popupField.textContent = targetPrj.field;
+        const prjImages = targetPrj.image;
+        const htmlsImages = prjImages.map(img => {
+          return (
+            `<img src="${img}" alt="Popup Image">`
+            )
+          })
+        popupImages.innerHTML = htmlsImages.join('')
+        body.classList.add('ftco-overflow-hidden');
       }
     }
 
-     closeBtn.onclick = function() {
+    closeBtn.onclick = function () {
+      body.classList.remove('ftco-overflow-hidden')
       const img = imgPopup.children[0];
       img.setAttribute('src', '');
       imgPopup.classList.remove('opened');

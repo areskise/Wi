@@ -9886,6 +9886,7 @@ textarea.form-control {
   background-image: url(../images/background-project.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .ftco-no-pt {
@@ -11446,11 +11447,14 @@ textarea.form-control {
   background: rgba(0, 0, 0, 1);
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   display: none;
+  overflow: auto;
 }
-
-.img-popup img {
+.img-popup .popupImages {
+  width: 100%;
+}
+.img-popup .popupImages img {
   /* max-width: 1920px; */
   /* margin: 24px 0px; */
   width: 100%;
@@ -11486,7 +11490,7 @@ textarea.form-control {
 }
 
 .close-btn {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   cursor: pointer;
@@ -11494,7 +11498,7 @@ textarea.form-control {
 }
 
 .btn-prev {
-  position: absolute;
+  position: fixed;
   top: 50%;
   right: 20px;
   cursor: pointer;
@@ -11502,7 +11506,7 @@ textarea.form-control {
 }
 
 .btn-next {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 20px;
   cursor: pointer;
