@@ -17,6 +17,7 @@ const projects = [
         "./assets/img/project1/car-5.jpg",
       ]
     },
+    
     //Data project 2
     {
       name: "Chuyện Đôi Ta",
@@ -30,6 +31,7 @@ const projects = [
         "./assets/img/project2/person_4.jpg",
       ]
     },
+    
     //Data project 3
     {
       name: "Hai Mươi Hai (22)",
@@ -43,6 +45,7 @@ const projects = [
         "./assets/img/project3/car-9.jpg",
       ]
     },
+    
     //Data project 4
     {
       name: "Waiting For You",
@@ -56,6 +59,7 @@ const projects = [
         "./assets/img/project4/car-12.jpg",
       ]
     },
+    
     //Data project 5
     {
       name: "Yêu Anh",
@@ -72,6 +76,7 @@ const projects = [
       ]
         
     },
+    
     //Data project 6
     {
       name: "Bài Tình Ca Đầu Tiên",
@@ -87,6 +92,7 @@ const projects = [
         "./assets/img/project6/image_6.jpg",
       ]
     },
+    
     //Data project 7
     {
       name: "Chưa Quên Người Yêu Cũ",
@@ -102,6 +108,7 @@ const projects = [
         "./assets/img/project7/image_6.jpg",
       ]
     },
+    
     //Data project 8
     {
       name: "Vì Mẹ Anh Bắt Chia Tay",
@@ -117,6 +124,7 @@ const projects = [
         "./assets/img/project8/image_6.jpg",
       ]
     },
+    
     //Data project 9
     {
       name: "Hỏi Thăm",
@@ -132,6 +140,7 @@ const projects = [
         "./assets/img/project9/image_6.jpg",
       ]
     },
+    
     //Data project 10
     {
       name: "Mặt Mộc",
@@ -147,6 +156,7 @@ const projects = [
         "./assets/img/project10/image_6.jpg",
       ]
     },
+    
     //Data project 11
     {
       name: "Lời Tạm Biệt Chưa Nói",
@@ -162,6 +172,7 @@ const projects = [
         "./assets/img/project11/image_6.jpg",
       ]
     },
+    
     //Data project 12
     {
       name: "Yêu Đương Khó Quá Thì Chạy Về Khóc Với Anh",
@@ -283,7 +294,7 @@ const app = {
         </div>
         `
 
-    projectFilter.innerHTML = htmlsFilter
+    projectFilter.innerHTML = htmlsFilter;
 
     const htmls1F = currentProjects.map((project, index) => {
       if (index === 0) {
@@ -306,7 +317,7 @@ const app = {
         )
       }
     })
-    project1F.innerHTML = htmls1F.join('')
+    project1F.innerHTML = htmls1F.join('');
 
     const htmls2F = currentProjects.map((project, index) => {
       if (index === 1 || index === 2) {
@@ -329,7 +340,7 @@ const app = {
         )
       }
     })
-    project2F.innerHTML = htmls2F.join('')
+    project2F.innerHTML = htmls2F.join('');
 
     const htmls3F = currentProjects.map((project, index) => {
       if (index === 3 || index === 4 || index === 5) {
@@ -352,7 +363,7 @@ const app = {
         )
       }
     })
-    project3F.innerHTML = htmls3F.join('')
+    project3F.innerHTML = htmls3F.join('');
 
     const htmls1S = currentProjects.map((project, index) => {
       if (index === 8) {
@@ -375,7 +386,7 @@ const app = {
         )
       }
     })
-    project1S.innerHTML = htmls1S.join('')
+    project1S.innerHTML = htmls1S.join('');
 
     const htmls2S = currentProjects.map((project, index) => {
       if (index === 6 || index === 7) {
@@ -421,31 +432,50 @@ const app = {
         )
       }
     })
-    project3S.innerHTML = htmls3S.join('')
+    project3S.innerHTML = htmls3S.join('');
   },
 
   handleEvents: function() {
-    const _this = this
+    const _this = this;
+    const currentProjects = _this.projects.filter(res => {
+    if (_this.currentType === 'Tất cả') {
+      return res
+    } else {
+        if (res.type === _this.currentType) {
+          return res
+        }
+      }
+    }).filter(res => {
+      if (_this.currentField === 'Tất cả') {
+        return res
+      } else {
+        if (res.field === _this.currentField) {
+          return res
+        }
+      }
+    })
 
     projectFilter.onclick = function (e) {
-      const className = e.target.className
+      const className = e.target.className;
       if (className.includes('type dropdown-item')) {
-        _this.currentType = e.target.textContent
-        _this.render()
+        _this.currentType = e.target.textContent;
+        _this.render();
+        _this.handleEvents();
       }
       if (className.includes('field dropdown-item')) {
-        _this.currentField = e.target.textContent
-        _this.render()
+        _this.currentField = e.target.textContent;
+        _this.render();
+        _this.handleEvents();
       }
     }
       
     nextBtn.onclick = function () {
-      imgPopup.scrollTo({top:0,behavior: "smooth"});
+      imgPopup.scrollTo({ top: 0, behavior: "smooth" });
       _this.currentIndex++;
-      if(_this.currentIndex >= _this.projects.length) {
-        _this.currentIndex = 0
+      if(_this.currentIndex >= currentProjects.length) {
+        _this.currentIndex = 0;
       }
-      const targetPrj = _this.projects[_this.currentIndex];
+      const targetPrj = currentProjects[_this.currentIndex];
       const popupName = imgPopup.children[2].children[0];
       const popupField = imgPopup.children[2].children[1];
       popupName.textContent = targetPrj.name;
@@ -456,17 +486,16 @@ const app = {
           `<img src="${img}" alt="Popup Image">`
           )
         })
-        popupImages.innerHTML = htmlsImages.join('')
-        // body.classList.add('ftco-overflow-hidden');     
+      popupImages.innerHTML = htmlsImages.join('');   
     }
 
     prevBtn.onclick = function () {
       imgPopup.scrollTo({top:0,behavior: "smooth"});
       _this.currentIndex--;
       if(_this.currentIndex < 0) {
-        _this.currentIndex = _this.projects.length - 1
+        _this.currentIndex = currentProjects.length - 1;
       }
-      const targetPrj = _this.projects[_this.currentIndex];
+      const targetPrj = currentProjects[_this.currentIndex];
         const popupName = imgPopup.children[2].children[0];
         const popupField = imgPopup.children[2].children[1];
         popupName.textContent = targetPrj.name;
@@ -477,8 +506,7 @@ const app = {
             `<img src="${img}" alt="Popup Image">`
             )
           })
-        popupImages.innerHTML = htmlsImages.join('')
-        // body.classList.add('ftco-overflow-hidden');
+      popupImages.innerHTML = htmlsImages.join('');
     }
 
     projectF.onclick = function (e) {
@@ -486,7 +514,7 @@ const app = {
       if(target) {
         const targetIndex = Number(target.dataset.index);
         _this.currentIndex = targetIndex;
-        const targetPrj = _this.projects[targetIndex];
+        const targetPrj = currentProjects[targetIndex];
         imgPopup.classList.add('opened');
         const popupName = imgPopup.children[2].children[0];
         const popupField = imgPopup.children[2].children[1];
@@ -498,8 +526,9 @@ const app = {
             `<img src="${img}" alt="Popup Image">`
           )
         })
-        popupImages.innerHTML = htmlsImages.join('')
+        popupImages.innerHTML = htmlsImages.join('');
         body.classList.add('ftco-overflow-hidden');
+        imgPopup.scrollTo({top:0,behavior: "smooth"});
       }
     }
 
@@ -508,7 +537,7 @@ const app = {
       if(target) {
         const targetIndex = Number(target.dataset.index);
         _this.currentIndex = targetIndex;
-        const targetPrj = _this.projects[targetIndex];
+        const targetPrj = currentProjects[targetIndex];
         imgPopup.classList.add('opened');
         const popupName = imgPopup.children[2].children[0];
         const popupField = imgPopup.children[2].children[1];
@@ -520,8 +549,9 @@ const app = {
             `<img src="${img}" alt="Popup Image">`
             )
           })
-        popupImages.innerHTML = htmlsImages.join('')
+        popupImages.innerHTML = htmlsImages.join('');
         body.classList.add('ftco-overflow-hidden');
+        imgPopup.scrollTo({top:0,behavior: "smooth"});
       }
     }
 
@@ -535,11 +565,11 @@ const app = {
   
   start: function() {
     // Lắng nghe và xử lý các sự kiện (DOM events)
-    this.handleEvents()
+    this.handleEvents();
 
     // Render playlist
-    this.render()
+    this.render();
   },
 }
 
-app.start()
+app.start();
