@@ -8189,6 +8189,15 @@ body {
   font-size: 16px;
   line-height: 1.8;
   color: #fff; }
+  
+ html {
+   scroll-snap-type: y mandatory;
+ }
+
+ section, footer {
+   scroll-snap-align: center;
+ }
+    
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -8342,7 +8351,9 @@ h1, h2, h3, h4, h5,
     left: 0;
     top: 0;
     margin-top: -130px;
-    background: #fff !important;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
     @media (max-width: 991.98px) {
@@ -9374,6 +9385,7 @@ h1, h2, h3, h4, h5,
     .solutions .services {
       display: flex;
       height: 600px;
+      position: relative;
       flex-direction: column;
       justify-content: center;
       align-items: end;
@@ -9385,17 +9397,22 @@ h1, h2, h3, h4, h5,
       align-items: center;
     }
 
+    .selected {
+      border-radius: 10px;
+    }
+
     .solutions .hover-bg {
       background-size: cover;
         background-repeat: no-repeat;
         /* background-position: center; */
+        background: rgba(255, 255, 255, 0);
       box-shadow: inset 0 0px 18px rgba(255, 255, 255, 1);
       border: 1px solid rgba(255, 255, 255, 0.5);
       z-index: 2;
       /* filter: blur(2px); */
-      /* backdrop-filter: blur(10px); */
-      /* -webkit-backdrop-filter: blur(10px); */
-      opacity: 1;
+      backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      opacity: unset;
     }
     .solutions .hover-bg.glass {
       background-image: url(../images/glass.png);
@@ -9418,7 +9435,7 @@ h1, h2, h3, h4, h5,
       padding: 12px;
       width: 100%;
       height: 600px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0);
       /* background-image: url(../images/glass1.png); */
       display: none;
     }
@@ -9520,6 +9537,30 @@ h1, h2, h3, h4, h5,
 
 .section-customer .svg-smile {
   top: 20%;
+  right: 4%;
+  width: 8%;
+  height: auto;
+  /* animation: easing 2s ease-out infinite;
+  animation: obscure 1s cubic-bezier(0.6, 0, 0.4, 1) infinite alternate;
+  animation: slide 1s ease-in-out infinite alternate; */
+}
+
+.ftco-counter .svg {
+  position: absolute;
+  z-index: 0;
+  /* transform: perspective(500px) rotateY(-42deg);
+  -webkit-transform: perspective(500px) rotateY(-42deg);
+  -moz-transform: perspective(500px) rotateY(-42deg);
+  -ms-transform: perspective(500px) rotateY(-42deg);
+  -o-transform: perspective(500px) rotateY(-42deg);
+  animation-name: rotate-windows;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; */
+}
+
+.ftco-counter .svg-fly {
+  top: 30%;
   right: 4%;
   width: 8%;
   height: auto;
@@ -10166,8 +10207,10 @@ textarea.form-control {
 
 .hover-bg {
   position: absolute;
-  width: 100%;
-  height: 600px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   /* background: radial-gradient(rgba(0, 224, 255, 1), rgba(43, 96, 197, 1)); */
   background-image: url('../images/stage-blur.png');
   background-size: cover;
@@ -11444,7 +11487,7 @@ textarea.form-control {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -11452,7 +11495,8 @@ textarea.form-control {
   overflow: auto;
 }
 .img-popup .popupImages {
-  width: 100%;
+  width: 96%;
+  padding: 48px;
 }
 .img-popup .popupImages img {
   /* max-width: 1920px; */
@@ -11491,8 +11535,8 @@ textarea.form-control {
 
 .close-btn {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 0px;
+  right: 32px;
   cursor: pointer;
   opacity: 0.5;
 }
@@ -11500,7 +11544,7 @@ textarea.form-control {
 .btn-prev {
   position: fixed;
   top: 50%;
-  left: 20px;
+  left: 14px;
   cursor: pointer;
   opacity: 0.5;
 }
@@ -11508,7 +11552,7 @@ textarea.form-control {
 .btn-next {
   position: fixed;
   top: 50%;
-  right: 20px;
+  right: 32px;
   cursor: pointer;
   opacity: 0.5;
 }

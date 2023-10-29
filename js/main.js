@@ -484,14 +484,14 @@
 //         scrollLeft: $('.projects .owl-carousel .owl-dots .owl-dot.active').offset().left + 200
 //     }, 500);
 // })
-if ($('.hero-wrap')) {
-	$('.hero-wrap').mousemove(function(event) {
-		 $(".hero-wrap").css({
-			 // "top": -event.pageY / 50,
-			 'background-position-y': -event.pageY / 50,
-			//  "left": -event.pageX / 50
-			 'background-position-x': -event.pageX / 50,
+// if ($('.hero-wrap')) {
+// 	$('.hero-wrap').mousemove(function(event) {
+// 		 $(".hero-wrap").css({
+// 			 // "top": -event.pageY / 50,
+// 			 'background-position-y': -event.pageY / 50,
+// 			//  "left": -event.pageX / 50
+// 			 'background-position-x': -event.pageX / 50,
 				
-		 });
-	});
-}
+// 		 });
+// 	});
+// }
