@@ -1,4 +1,4 @@
-$(document).ready(function(){
+// $(document).ready(function(){
    // code here
 
 var swiper = new Swiper(".bannerSwiper", {
@@ -18,9 +18,17 @@ var rellax = new Rellax('.rellax');
 
 var mouseSensitivity = 400;
 
-$('.hero-wrap.banner').mousemove(function (event) {
-  console.log($('.hero-wrap.banner'));
-   $('.hero-wrap.banner').css({
+const banner = $('.hero-wrap.banner')
+const main = $(document)
+const like = $('.svg-like')
+const ht = $('.svg-ht')
+const heart = $('.svg-heart')
+const design = $('.svg-design')
+const chart = $('.svg-chart')
+const smile = $('.svg-smile')
+
+banner.mousemove(function (event) {
+   banner.css({
      // "top": -event.pageY / 50,
      'background-position-y': -event.pageY / 50,
     //  "left": -event.pageX / 50
@@ -111,7 +119,7 @@ $('.contact.ftco-counter').mousemove(function(event) {
   minion4.style.transform = translate;
 });
 
-$(document).mousemove(function(event) {
+main.mousemove(function(event) {
   var width = screen.availWidth;
   var height = screen.availHeight;
   var offsetX = 0.5 - event.pageX / width;
@@ -125,37 +133,37 @@ $(document).mousemove(function(event) {
   }
 });
 
-$(document).scroll(function () {
-  scrollPos = $(this).scrollTop();
+main.scroll(function () {
+  scrollPos = main.scrollTop();
   var height = screen.availHeight;
-  $('.svg-like').css({
-    'animation': (scrollPos - (height / 2.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+  like.css({
+    'animation': (scrollPos - (height / 2)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
   });
-  $('.svg-ht').css({
+  ht.css({
     'animation': (scrollPos - (height / 2)) * 2 / height > 0 ? 'fadeInUp 1s ease-in' : 'fadeOutDown 1s ease-in',
     'animation-fill-mode': 'forwards'
     
   });
-  $('.svg-heart').css({
-    'animation': (scrollPos - (height)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
+  heart.css({
+    'animation': (scrollPos - (height / 2)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
     
   });
-  $('.svg-design').css({
+  design.css({
     'animation': (scrollPos - (height * 1.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
     
    });
-   $('.svg-chart').css({
+   chart.css({
      'animation': (scrollPos - (height * 1.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
      
    });
-  $('.svg-smile').css({
+  smile.css({
     'animation': (scrollPos - (height * 2.5)) * 2 / height > 0 ? 'fadeInUp 1s ease-in-out' : 'fadeOutDown 1s ease-in-out 1',
     'animation-fill-mode': 'forwards'
     
 	});
 });
-});
+// });
