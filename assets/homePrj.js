@@ -6,7 +6,7 @@ const projects = [
     //Data project 1
     {
       name: "Bài Này Không Để Đi Diễn",
-      field: "Anh Tú Atus",
+      field: "Sector",
       type: "BrandCom",
       image: [
         "./assets/img/project1/project1.png",
@@ -21,7 +21,7 @@ const projects = [
     //Data project 2
     {
       name: "Chuyện Đôi Ta",
-      field: "Emcee L (Da LAB), Muộii",
+      field: "Industrial",
       type: "Digital Marketing",
       image: [
         "./assets/img/project2/project2.png",
@@ -35,7 +35,7 @@ const projects = [
     //Data project 3
     {
       name: "Hai Mươi Hai (22)",
-      field: "Hứa Kim Tuyền, AMEE",
+      field: "Agriculture",
       type: "BrandCom",
       image: [
         "./assets/img/project3/project3.png",
@@ -49,7 +49,7 @@ const projects = [
     //Data project 4
     {
       name: "Waiting For You",
-      field: "MONO, Onionn",
+      field: "Media",
       type: "BrandCom",
       image: [
         "./assets/img/project4/project4.png",
@@ -63,7 +63,7 @@ const projects = [
     //Data project 5
     {
       name: "Yêu Anh",
-      field: "Miu Lê",
+      field: "Education",
       type: "BrandCom",
       image: [
         "./assets/img/project5/project5.png",
@@ -80,7 +80,7 @@ const projects = [
     //Data project 6
     {
       name: "Bài Tình Ca Đầu Tiên",
-      field: "Duy Khoa",
+      field: "Finance",
       type: "Mobile App",
       image: [
         "./assets/img/project6/project6.png",
@@ -96,7 +96,7 @@ const projects = [
     //Data project 7
     {
       name: "Chưa Quên Người Yêu Cũ",
-      field: "Hà Nhi",
+      field: "Beauty & Fashion",
       type: "Mobile App",
       image: [
         "./assets/img/project7/project7.png",
@@ -112,7 +112,7 @@ const projects = [
     //Data project 8
     {
       name: "Vì Mẹ Anh Bắt Chia Tay",
-      field: "Miu Lê, Karik, Châu Đăng Khoa",
+      field: "Hotel & Restaurant",
       type: "Website",
       image: [
         "./assets/img/project8/project8.png",
@@ -128,7 +128,7 @@ const projects = [
     //Data project 9
     {
       name: "Hỏi Thăm",
-      field: "Vũ Cát Tường",
+      field: "Sector",
       type: "Website",
       image: [
         "./assets/img/project9/project9.png",
@@ -144,7 +144,7 @@ const projects = [
     //Data project 10
     {
       name: "Mặt Mộc",
-      field: "Phạm Nguyên Ngọc, VAnh, Ân Nhi",
+      field: "Industrial",
       type: "Website",
       image: [
         "./assets/img/project10/project10.png",
@@ -160,7 +160,7 @@ const projects = [
     //Data project 11
     {
       name: "Lời Tạm Biệt Chưa Nói",
-      field: "GREY D, Orange",
+      field: "Agriculture",
       type: "Digital Marketing",
       image: [
         "./assets/img/project11/project11.png",
@@ -176,7 +176,7 @@ const projects = [
     //Data project 12
     {
       name: "Yêu Đương Khó Quá Thì Chạy Về Khóc Với Anh",
-      field: "ERIK",
+      field: "Media",
       type: "BrandCom",
       image: [
         "./assets/img/project12/project12.png",
